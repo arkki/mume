@@ -25,3 +25,7 @@
 
 #alias idle {#ticker idle {prac} 60}
 #alias unidle {#unticker idle}
+
+#nop Custom - mmapper
+#alias {c} {_close}
+#alias {o} {_open}

@@ -1,0 +1,12 @@
+Scrollbar=0
+CursorType=0
+CursorBlinks=0
+Transparency=0
+CursorColour=0,255,0
+Font=Courier New
+FontHeight=10
+ConfirmExit=0
+Rows=25
+ScrollbackLines=10000
+Term=xterm-256color
+BellSound=0
