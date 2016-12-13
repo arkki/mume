@@ -122,11 +122,89 @@ Cleric Spells		Rdell	Hlond	Flond	Druid 	MinBrethTbad	Lorien
 18:Sanctuary 		15	-	6	- 	-	-	25
 
 
-_STILL_UNDER CONSTRUCTION!!! (guilds change!)
+ORCS:
 
 
-Back
+General/Ranger Skills	heavily scarred orc	Gumak
+Awareness		18			-
+Bandage			8			7
+Climb			13			11
+Command			8			14
+Leadership		13			13
+Ride			13			3
+Swim			13			3
+Track			27			27
+Wilderness		-			27
 
 
 
+Warrior Skills		orkish master-warrior
+Bash			43
+Charge			29
+Cleaving Weapons	29
+Concussion Weapons	29
+Endurance		58
+Kick			29
+Parry			29
+Rescue			10
+Slashing Weapons	29
+Stabbing Weapons	29
+Two Handed Weapons	29
 
+Scout Skills	Kraksh
+Attack		16
+Backstab	23
+Dodge		23
+Envenom		23
+Escape		16
+Hide		16
+Missile		13
+Pick		8
+Piercing	16
+Search		3
+Sneak		23
+Steal		16
+
+Mage Spells		Thrakghash
+2:Detect Magic		6
+2:Detect Invisibility	8
+3:Chill Touch		10
+3:Armour		16
+4:Locate Magic		10
+5:Burning Hands		11
+5:Shroud		5
+7:Shocking Grasp	11
+7:Call Familiar		4
+8:Earthquake		16
+9:Lightning Bolt	16
+10:Control Weather	13
+13:Shield		16
+
+Shaman:
+Cleric Spells		Sage	Evil P.	Brolg
+1:Cure Light		12	-	2
+2:Create Water		4	-	3
+2:Detect Poison		6	-	-
+3:Create Food		4	-	3
+3:Smother		-	12	-
+4:Cure Blindness	8	-	-
+5:Cure Serious		-	11	2
+6:Blindness		-	22	-
+7:Strength		8	-	-
+7:Sense Life		-	6	-
+8:Poison		-	18	-
+9:Cure Critic		-	9	2
+9:Remove Poison		-	6	-
+10:Breath of Briskness	-	11	16
+10:Curse		-	18	-
+11:Word of Recall	17	-	10
+12:Remove Curse		-	7	-
+13:Energy Drain		-	26	-
+13:Darkness		8	-	11
+15:Fear	-		18	26
+15:Harm	-		22	-
+16:Black Breath		-	25	35
+17:Break Door		14	-	-
+17:Hold			-	35	-
+18:Sanctuary		-	-	-
+18:Raise Dead		26	22	-
