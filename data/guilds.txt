@@ -334,3 +334,31 @@ Piercing		16
 Search			4
 Sneak			23
 Steal			-
+
+
+TROLL:
+
+General/Ranger Skills	Smelly
+Awareness		11
+Swim			3
+Track			27
+Wilderness		27
+
+
+Warrior Skills		Crusher
+Bash			40
+Cleaving Weapons	23
+Concussion Weapons	23
+Endurance		58
+Kick			23
+Parry			23
+Rescue			8
+Slashing Weapons	23
+Stabbing Weapons	23
+Two Handed Weapons	23
+Unarmed			34
+
+
+Thief Skills	Clunker
+Escape		8
+Search		1
