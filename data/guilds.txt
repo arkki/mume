@@ -122,11 +122,243 @@ Cleric Spells		Rdell	Hlond	Flond	Druid 	MinBrethTbad	Lorien
 18:Sanctuary 		15	-	6	- 	-	-	25
 
 
-_STILL_UNDER CONSTRUCTION!!! (guilds change!)
+BN:
+
+General/Ranger Skills	gaunt man
+Awareness		27
+Bandage			18
+Climb			13
+Command			27
+Leadership		27
+Ride			13
+Swim			13
+Track			27
+Wilderness		27
 
 
-Back
+Thief Skills	grey-cloaked man	Eoghha
+Backstab	23			-
+Dodge		18			-
+Envenom		-			16
+Escape		13			-
+Hide		16			-
+Missile		5			-
+Pick		5			-
+Search		5			-
+Sneak		23			-
+Steal		12			-
+
+
+Mage Spells		cowled sorcerer
+1:Magic Missile		8
+1:Ventriloquate		5
+2:Detect Magic		8
+2:Detect Invisibility	11
+3:Chill Touch		8
+3:Armour		16
+4:Create Light		3
+4:Locate Magic		10
+5:Burning Hands		11
+5:Shroud		12
+6:Locate		12
+7:Night Vision		9
+7:Shocking Grasp	11
+8:Teleport		13
+8:Earthquake		16
+9:Lightning Bolt	16
+9:Block Door		8
+10:Control Weather	???
+10:Store		16
+11:Colour Spray		???
+11:Locate Life		12
+12:Call Lightning	16
+12:Enchant		13
+13:Shield		16
+13:Scry			12
+14:Charm		9
+14:Sleep		13
+15:Fireball		16
+15:Identify		16
+16:Dispel Magic		19
+16:Watch Room		8
+17:Silence		11
+18:Portal		22
+18:Magic Blast		22
+
+
+Cleric Spells		dark-robed man
+2:Create Water		6
+3:Create Food		6
+3:Smother		???
+5:Cure Serious		6
+6:Blindness		18
+6:Cure Disease		???
+7:Strength		8
+7:Sense Life		8
+8:Summon		11
+8:Poison		10
+9:Cure Critic		8
+9:Remove Poison		6
+10:Breath of Briskness	16
+12:Remove Curse		3
+13:Energy Drain		18
+13:Darkness		12
+15:Harm			15
+17:Break Door		9
+18:Sanctuary	18
 
 
 
+ORCS:
+General/Ranger Skills	heavily scarred orc	Gumak
+Awareness		18			-
+Bandage			8			7
+Climb			13			11
+Command			8			14
+Leadership		13			13
+Ride			13			3
+Swim			13			3
+Track			27			27
+Wilderness		-			27
 
+
+Warrior Skills		orkish master-warrior
+Bash			43
+Charge			29
+Cleaving Weapons	29
+Concussion Weapons	29
+Endurance		58
+Kick			29
+Parry			29
+Rescue			10
+Slashing Weapons	29
+Stabbing Weapons	29
+Two Handed Weapons	29
+
+Scout Skills	Kraksh
+Attack		16
+Backstab	23
+Dodge		23
+Envenom		23
+Escape		16
+Hide		16
+Missile		13
+Pick		8
+Piercing	16
+Search		3
+Sneak		23
+Steal		16
+
+Mage Spells		Thrakghash
+2:Detect Magic		6
+2:Detect Invisibility	8
+3:Chill Touch		10
+3:Armour		16
+4:Locate Magic		10
+5:Burning Hands		11
+5:Shroud		5
+7:Shocking Grasp	11
+7:Call Familiar		4
+8:Earthquake		16
+9:Lightning Bolt	16
+10:Control Weather	13
+13:Shield		16
+
+Shaman:
+Cleric Spells		Sage	Evil P.	Brolg
+1:Cure Light		12	-	2
+2:Create Water		4	-	3
+2:Detect Poison		6	-	-
+3:Create Food		4	-	3
+3:Smother		-	12	-
+4:Cure Blindness	8	-	-
+5:Cure Serious		-	11	2
+6:Blindness		-	22	-
+7:Strength		8	-	-
+7:Sense Life		-	6	-
+8:Poison		-	18	-
+9:Cure Critic		-	9	2
+9:Remove Poison		-	6	-
+10:Breath of Briskness	-	11	16
+10:Curse		-	18	-
+11:Word of Recall	17	-	10
+12:Remove Curse		-	7	-
+13:Energy Drain		-	26	-
+13:Darkness		8	-	11
+15:Fear	-		18	26
+15:Harm	-		22	-
+16:Black Breath		-	25	35
+17:Break Door		14	-	-
+17:Hold			-	35	-
+18:Sanctuary		-	-	-
+18:Raise Dead		26	22	-
+
+
+ZORC:
+General/Ranger Skills	Grobb [swnwwuu]
+Awareness		18
+Bandage			18
+Climb			13
+Command			-
+Leadership		27
+Ride			-
+Swim			13
+Track			27
+Wilderness		27
+
+
+Warrior Skills	Gorkolung [ses]
+Bash			43
+Charge			-
+Cleaving Weapons	29
+Concussion Weapons	29
+Endurance		58
+Kick			29
+Parry			29
+Rescue			21
+Slashing Weapons	29
+Stabbing Weapons	29
+Two Handed Weapons	29
+
+
+Scout Skills	Narag [swsee]
+Attack			16
+Backstab		23
+Dodge			23
+Envenom			23
+Escape			-
+Hide			16
+Missile			16
+Pick			6
+Piercing		16
+Search			4
+Sneak			23
+Steal			-
+
+
+TROLL:
+
+General/Ranger Skills	Smelly
+Awareness		11
+Swim			3
+Track			27
+Wilderness		27
+
+
+Warrior Skills		Crusher
+Bash			40
+Cleaving Weapons	23
+Concussion Weapons	23
+Endurance		58
+Kick			23
+Parry			23
+Rescue			8
+Slashing Weapons	23
+Stabbing Weapons	23
+Two Handed Weapons	23
+Unarmed			34
+
+
+Thief Skills	Clunker
+Escape		8
+Search		1

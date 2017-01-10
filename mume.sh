@@ -1,3 +1,3 @@
 #!/bin/sh
 export PATH=.:$PATH
-tt++ tintin/main.tin
+tt++ tintin/_main.tin
