@@ -6,8 +6,10 @@
 
 #highlight {^You gain a level!$} {blue reverse b white}
 
+#highlight {corpse} {bold red}
 
-#nop highlight {R.I.P.} {bold yellow}
+
+#highlight {R.I.P.} {bold yellow}
 #nop highlight {^%* has arrived from %*.$} {bold yellow}
 #nop highlight {^A%? %w has arrived from %*.$} {bold yellow}
 #nop highlight {^A%? %w %w has arrived from %*.$} {bold yellow}

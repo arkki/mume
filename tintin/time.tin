@@ -3,12 +3,6 @@
 #gag {^Last reboot due to a %* at %.%.%. %.%.%.  %?%d %d:%d:%d %d GMT.$}
 
 
-# nop gå inte ut i gult
-
-
-
-
-
 #highlight {^1am on %S, the %* of Afteryule} {green}
 #highlight {^2am on %S, the %* of Afteryule} {green}
 #highlight {^3am on %S, the %* of Afteryule} {green}

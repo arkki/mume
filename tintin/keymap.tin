@@ -4,65 +4,70 @@
 
 #nop Alt+Arrows
 
-#macro {\e\e[A} {#echo North;north}
-#macro {\e\e[B} {#echo South;south}
-#macro {\e\e[D} {#echo West;west}
-#macro {\e\e[C} {#echo East;east}
-#macro {\e\e[5~} {#echo Up;up}
-#macro {\e\e[6~} {#echo Down;down}
+#nop {\e\e[A} {#echo North;north}
+#nop {\e\e[B} {#echo South;south}
+#nop {\e\e[D} {#echo West;west}
+#nop {\e\e[C} {#echo East;east}
+#nop {\e\e[5~} {#echo Up;up}
+#nop {\e\e[6~} {#echo Down;down}
 
+#nop macOS
+#macro {\ea} {#echo North;north}
+#macro {\eb} {#echo South;south}
+#macro {\ed} {#echo West;west}
+#macro {\ec} {#echo East;east}
 
 #nop Alt+Shift+Arrows
 
-#macro {\e\e[a} {#echo {shift North};shift north}
-#macro {\e\e[b} {#echo {shift South};shift south}
-#macro {\e\e[d} {#echo {shift West};shift west}
-#macro {\e\e[c} {#echo {shift East};shift east}
-#macro {\e\e[5$} {#echo {shift Up};shift up}
-#macro {\e\e[6$} {#echo {shift Down};shift down}
+#nop {\e\e[a} {#echo {shift North};shift north}
+#nop {\e\e[b} {#echo {shift South};shift south}
+#nop {\e\e[d} {#echo {shift West};shift west}
+#nop {\e\e[c} {#echo {shift East};shift east}
+#nop {\e\e[5$} {#echo {shift Up};shift up}
+#nop {\e\e[6$} {#echo {shift Down};shift down}
 
 
 #nop UIOJKL (when arrows are not available)
 
-#macro {\ei} {#echo North;north}
-#macro {\ek} {#echo South;south}
-#macro {\ej} {#echo West;west}
-#macro {\el} {#echo East;east}
-#macro {\eu} {#echo Up;up}
-#macro {\eo} {#echo Down;down}
+#nop {\ei} {#echo North;north}
+#nop {\ek} {#echo South;south}
+#nop {\ej} {#echo West;west}
+#nop {\el} {#echo East;east}
+#nop {\eu} {#echo Up;up}
+#nop {\eo} {#echo Down;down}
 
 
 #nop Shift+UIOJKL (when arrows are not available)
 
-#macro {\eI} {#echo {shift North};shift north}
-#macro {\eK} {#echo {shift South};shift south}
-#macro {\eJ} {#echo {shift West};shift west}
-#macro {\eL} {#echo {shift East};shift east}
-#macro {\eU} {#echo {shift Up};shift up}
-#macro {\eO} {#echo {shift Down};shift down}
+#nop {\eI} {#echo {shift North};shift north}
+#nop {\eK} {#echo {shift South};shift south}
+#nop {\eJ} {#echo {shift West};shift west}
+#nop {\eL} {#echo {shift East};shift east}
+#nop {\eU} {#echo {shift Up};shift up}
+#nop {\eO} {#echo {shift Down};shift down}
 
 
 #nop Combat
 
-#macro {\ea} {#echo assist;assist}
-#macro {\eb} {#echo BA(sh/ckstab);ba}
-#macro {\eB} {#echo {BA(sh/ckstab) x};ba x}
-#macro {\ee} {#echo {open exit};open exit}
-#macro {\ef} {#echo flee;flee}
+#nop {\ea} {#echo assist;assist}
+#nop {\eb} {#echo BA(sh/ckstab);ba}
+#nop {\eB} {#echo {BA(sh/ckstab) x};ba x}
+#nop {\ee} {#echo {open exit};open exit}
+#nop {\ef} {#echo flee;flee}
 #nop   {\ei} (used by alternate movement)
 #nop   {\ej} (used by alternate movement)
 #nop   {\ek} (used by alternate movement)
 #nop   {\el} (used by alternate movement)
-#macro {\em} {#echo lead;lead}
-#macro {\eM} {#echo ride;ride}
+#nop {\em} {#echo lead;lead}
+#nop {\eM} {#echo ride;ride}
 #nop   {\eo} (used by alternate movement)
-#macro {\eq} {#echo recover;recover}
-#macro {\eQ} {#echo {get all.arrow};get all.arrow;#echo {get all.arrow all.corpse};get all.arrow all.corpse;#echo {put all.arrow quiver};put all.arrow quiver}
-#macro {\er} {#echo rescue;rescue}
-#macro {\es} {#echo shoot;shoot}
-#macro {\eS} {#echo {shoot x};shoot x}
-#macro {\et} {#echo {label x};label x}
+#nop {\eq} {#echo recover;recover}
+#nop {\eQ} {#echo {get all.arrow};get all.arrow;#echo {get all.arrow all.corpse};get all.arrow all.corpse;#echo {put all.arrow quiver};put all.arrow quiver}
+#nop {\er} {#echo rescue;rescue}
+#nop {\es} {#echo shoot;shoot}
+#nop {\eS} {#echo {shoot x};shoot x}
+#nop {\et} {#echo {label x};label x}
 #nop   {\eu} (used by alternate movement)
-#macro {\ex} {#echo {kill x};kill x}
-#macro {\ew} {#echo wake;wake}
-#macro {\ez} {#echo sleep;sleep}
+#nop {\ex} {#echo {kill x};kill x}
+#nop {\ew} {#echo wake;wake}
+#nop {\ez} {#echo sleep;sleep}

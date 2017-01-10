@@ -1,5 +1,6 @@
 #CONFIG           {AUTO TAB}  {5000}
 #CONFIG           {BUFFER SIZE}  {1000000}
+#CONFIG           {CHARSET}  {UTF-8}
 #CONFIG           {COMMAND COLOR}  {<078>}
 #CONFIG           {COMMAND ECHO}  {ON}
 #CONFIG           {CONNECT RETRY}  {15}
@@ -44,6 +45,8 @@
 #read tintin/highlights.tin
 #read tintin/keymap.tin
 #read tintin/prompt.tin
+#read tintin/time.tin
+
 
 gg
 

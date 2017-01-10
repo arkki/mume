@@ -25,3 +25,39 @@
 
 #alias idle {#ticker idle {prac} 60}
 #alias unidle {#unticker idle}
+
+#alias {c} {
+	_close
+}
+
+#alias {o} {
+	_open
+}
+
+#alias {ul} {
+	_unlock
+}
+
+#alias {lo} {
+	_lock
+}
+
+#alias {pi} {
+	_pick
+}
+
+#alias {sr} {
+	stand;
+	ride
+}
+
+#alias {qf} {
+	get draught pack;
+	quaff draught
+}
+
+#alias {qd} {
+	get zaugurz-draught pack;
+	quaff zaugurz-draught
+}
+
