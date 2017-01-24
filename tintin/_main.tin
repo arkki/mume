@@ -52,9 +52,9 @@ gg
 
 #read login
 
-#script {timestamp} {date +%Y-%m-%d_%H:%M:%S}
-#system {mkdir -p logs}
-#log {append} {logs/$timestamp[1].log}
-#system {rm -f log}
-#system {ln -s logs/$timestamp[1].log log}
-
+#NOP Disabled for Windows
+#NOP #script {timestamp} {date +%Y-%m-%d_%H:%M:%S}
+#NOP #system {mkdir -p logs}
+#NOP #log {append} {logs/$timestamp[1].log}
+#NOP #system {rm -f log}
+#NOP #system {ln -s logs/$timestamp[1].log log}
