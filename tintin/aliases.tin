@@ -47,6 +47,11 @@
 	quaff zaugurz-draught
 }
 
+#alias qsc {
+    get scorched pack;
+    quaff scorched
+}    
+
 #alias {bob} {get ivory all;recite ivory}
 
 #alias {ds} {get ornate pack;draw ornate}
