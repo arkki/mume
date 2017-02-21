@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<!-- Original url=(0039)http://mandor.se/bsc/statgen.php -->
+<html>
+
+<head>
+    <title>statgenerator</title>
+    <meta name="description" content="A MUME reroll stat generator, with skills and percentages">
+    <meta name="keywords" content="MUME, reroll, stat, generator, stats, skills, skill, class">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <script language="Javascript">
+        <!--
+        //////////////// VARIABLES  AFTER THIS LINE ////////////////////
+        var MUMEVERSION = 7
+        var maxPoints = 175;
+        var pointsLeft = 175;
+        var pointsLeft2 = 175;
+        var maxValue = 18
+        var minValue = 8
+        var statCosts = new Array(55, 45, 36, 28, 21, 15, 10, 6, 3, 1, 0)
+        var statValues = new Array(18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8)
+        var startStats = new Array(8, 8, 8, 8, 8, 8, 8)
+        var tmpStats = new Array(8, 8, 8, 8, 8, 8, 8)
+        var tmpStats2 = new Array(8, 8, 8, 8, 8, 8, 8)
+        var raceModifiers = new Array(0, 0, 0, 0, 0, 0, 0)
+        var playerRace = "Human"
+        var ageModifiers = new Array(0, 0, 0, 0, 0, 0, 0)
+        var playerAge = 0;
+        var ageBrackets = new Array(0, 18, 24, 32, 40, 50, 65, 90)
+        var lifeRange = 1;
+        //////////////// SUBRUTINES AFTER THIS LINE ////////////////////
+        function changeVersion(mumeVersion) {
+            if (mumeVersion == "6") {
+                MUMEVERSION = 6
+                maxPoints = 99 // In mume 6 its the stat sum that decide if you can continue
+                pointsLeft = 99 - 56; // so from now on we consider this the statsum/whats left of statsum
+                pointsLeft2 = 99 - 56; // so from now on we consider this the statsum/whats left of statsum
+                minValue = 6
+                statCosts = new Array(12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
+                statValues = new Array(18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6)
+                document.statForm.pointsSum.value = "Stat sum:"
+                document.statForm.pointsSum2.value = "Stat sum:"
+            }
+            else {
+                MUMEVERSION = 7
+                maxPoints = 175
+                pointsLeft = 175;
+                pointsLeft2 = 175;
+                minValue = 8
+                statCosts = new Array(55, 45, 36, 28, 21, 15, 10, 6, 3, 1, 0)
+                statValues = new Array(18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8)
+                document.statForm.pointsSum.value = "Points left:"
+                document.statForm.pointsSum2.value = "Points left:"
+            }
+            changeRace(playerRace)
+            changeAge(playerAge)
+            resetStats()
+            resetStats2()
+        }
+
+        function resetStats() {
+            updateStats(startStats)
+            tmpStats = new Array()
+            //  tmpStats   = tmpStats.concat(startStats) // ONLY WORKS IN NETSCAPE 4.0+
+            for (var i = 0; i < startStats.length; i++) {
+                tmpStats[i] = startStats[i]
+            }
+            if (MUMEVERSION == 7) {
+                pointsLeft = maxPoints
+            }
+            else {
+                pointsLeft = statSum(tmpStats)
+            }
+            document.statForm.pointsLeft.value = pointsLeft
+            updateStats(startStats)
+        }
+
+        function resetStats2() {
+            updateStats2(startStats)
+            tmpStats2 = new Array()
+            for (var i = 0; i < startStats.length; i++) {
+                tmpStats2[i] = startStats[i]
+            }
+            if (MUMEVERSION == 7) {
+                pointsLeft2 = maxPoints
+            }
+            else {
+                pointsLeft2 = statSum(tmpStats2)
+            }
+            document.statForm.pointsLeft2.value = pointsLeft2
+            updateStats2(startStats)
+        }
+
+        function copyStats() {
+            for (var i = 0; i < tmpStats.length; i++) {
+                tmpStats2[i] = tmpStats[i]
+            }
+            pointsLeft2 = pointsLeft
+            document.statForm.pointsLeft2.value = pointsLeft
+            updateStats2(tmpStats2)
+        }
+
+        function inc(stat) {
+            if (tmpStats[stat - 1] < maxValue) {
+                if (MUMEVERSION == 7) {
+                    var diff = statCost(1 + tmpStats[stat - 1]) - statCost(tmpStats[stat - 1])
+                    if (pointsLeft - diff >= 0) {
+                        pointsLeft -= diff
+                        tmpStats[stat - 1]++
+                            document.statForm.pointsLeft.value = pointsLeft + " (" + statSum(tmpStats) + ", " + currentStatSum(tmpStats) + ")"
+                    }
+                }
+                else {
+                    if (pointsLeft + 1 <= maxPoints) {
+                        pointsLeft++
+                        tmpStats[stat - 1]++
+                            var tmp = 0
+                        for (var i = 0; i < tmpStats.length; i++) {
+                            tmp += ageModifiers[i] + raceModifiers[i]
+                        }
+                        document.statForm.pointsLeft.value = "(" + statSum(tmpStats) + ", " + currentStatSum(tmpStats) + ")"
+                    }
+                }
+                updateStats(tmpStats)
+            }
+        }
+
+        function inc2(stat) {
+            if (tmpStats2[stat - 1] < maxValue) {
+                if (MUMEVERSION == 7) {
+                    var diff = statCost(1 + tmpStats2[stat - 1]) - statCost(tmpStats2[stat - 1])
+                    if (pointsLeft2 - diff >= 0) {
+                        pointsLeft2 -= diff
+                        tmpStats2[stat - 1]++
+                            document.statForm.pointsLeft2.value = pointsLeft2 + " (" + statSum(tmpStats2) + ", " + currentStatSum(tmpStats2) + ")"
+                    }
+                }
+                else {
+                    if (pointsLeft2 + 1 <= maxPoints) {
+                        pointsLeft2++
+                        tmpStats2[stat - 1]++
+                            var tmp = 0
+                        for (var i = 0; i < tmpStats2.length; i++) {
+                            tmp += ageModifiers[i] + raceModifiers[i]
+                        }
+                        document.statForm.pointsLeft2.value = "(" + statSum(tmpStats2) + ", " + currentStatSum(tmpStats2) + ")"
+                    }
+                }
+                updateStats2(tmpStats2)
+            }
+        }
+
+        function dec(stat) {
+            if (tmpStats[stat - 1] > minValue) {
+                if (MUMEVERSION == 7) {
+                    var dec = statCost(tmpStats[stat - 1]) - statCost(tmpStats[stat - 1] - 1)
+                    pointsLeft += dec
+                }
+                else {
+                    pointsLeft--
+                }
+                tmpStats[stat - 1]--
+                    document.statForm.pointsLeft.value = pointsLeft
+                updateStats(tmpStats)
+            }
+        }
+
+        function dec2(stat) {
+            if (tmpStats2[stat - 1] > minValue) {
+                if (MUMEVERSION == 7) {
+                    var dec = statCost(tmpStats2[stat - 1]) - statCost(tmpStats2[stat - 1] - 1)
+                    pointsLeft2 += dec
+                }
+                else {
+                    pointsLeft2--
+                }
+                tmpStats2[stat - 1]--
+                    document.statForm.pointsLeft2.value = pointsLeft2
+                updateStats2(tmpStats2)
+            }
+        }
+
+        function currentStatSum(theStats) {
+            var sum = statSum(theStats)
+            for (var i = 0; i < theStats.length; i++) {
+                sum += ageModifiers[i] + ageModifiers[i]
+            }
+            return sum
+        }
+
+        function statSum(theStats) {
+            var sum = 0
+            for (var i = 0; i < theStats.length; i++) {
+                sum += theStats[i]
+            }
+            return sum
+        }
+
+        function statCost(statValue) {
+            for (var i = 0; i < statValues.length; i++) {
+                if (statValue == statValues[i]) {
+                    return statCosts[i]
+                }
+            }
+            return -1
+        }
+
+        function updateStats(theStats) {
+            for (var i = 1; i <= theStats.length; i++) {
+                eval("document.statForm.stat" + i + ".value = theStats[i-1] + raceModifiers[i-1] + ageModifiers[i-1]")
+            }
+
+            //  document.frn.str.value=theStats[0]+raceModifiers[0];
+            //  document.frn.inte.value=theStats[1]+raceModifiers[1];
+            //  document.frn.wis.value=theStats[2]+raceModifiers[2];
+            //  document.frn.dex.value=theStats[3]+raceModifiers[3];
+            //  document.frn.con.value=theStats[4]+raceModifiers[4];
+            //  document.frn.wil.value=theStats[5]+raceModifiers[5];
+            //  document.frn.per.value=theStats[6]+raceModifiers[6];
+
+            var str = theStats[0] + raceModifiers[0];
+            var inte = theStats[1] + raceModifiers[1];
+            var wis = theStats[2] + raceModifiers[2];
+            var dex = theStats[3] + raceModifiers[3];
+            var con = theStats[4] + raceModifiers[4];
+            var wil = theStats[5] + raceModifiers[5];
+            var per = theStats[6] + raceModifiers[6];
+
+            document.frn.moves.value = 1.5 * con + 1.5 * dex + 71;
+            document.frn.hps.value = (2.6 + 0.375 * con) * 25.1;
+            document.frn.hpsb.value = (2.6 + 0.375 * con) * 25.1 * 0.8495;
+            var mana = 4 * inte + 4 * wis - 15;
+            document.frn.manap.value = mana;
+            document.frn.manapb.value = mana;
+            document.frn.awareness.value = 20 + 3.75 * per + 2.6 * inte;
+            document.frn.climb.value = 16 + 3 * dex + 2 * wil + 1.25 * str;
+            document.frn.first.value = 18 + 3.75 * inte + 2.5 * dex;
+            document.frn.leadership.value = 20 + 3.75 * wil + 2.5 * wis;
+            document.frn.ride.value = 18 + 3.75 * dex + 2.5 * wil;
+            document.frn.swim.value = 18 + 3 * con + 2 * wil + 1.33 * dex;
+            //document.frn.trackold.value=20+3.75*per+2.5*inte;
+            document.frn.track.value = 3.21 * inte + 4.1 * per + 5.41;
+            //document.frn.wildernessold.value=20+3.75*str+2.5*wil;
+            document.frn.wilderness.value = 4.2 * str + 5.5 * wil - 22.3;
+            document.frn.bash.value = 50 + 1.67 * str + dex + 0.67 * wil;
+            document.frn.cleaving.value = 50 + 1.56 * str + dex + 0.67 * wil;
+            var consmi = 50 + 1.56 * str + con + 0.67 * wil;
+            document.frn.concussion.value = consmi;
+            document.frn.smite.value = consmi;
+
+            document.frn.endurance.value = 48 + 2.2 * con + 1.3 * wil;
+            document.frn.parry.value = 50 + 1.56 * dex + per + 0.67 * str;
+            document.frn.rescue.value = 52 + 1.4 * dex + wil + 0.67 * str;
+
+            var ss = 50 + 1.56 * str + dex + 0.67 * per;
+            document.frn.slashing.value = ss;
+            document.frn.stabbing.value = ss;
+
+            var bdsesh = 45 + 2 * dex + 1.25 * per;
+            document.frn.backstab.value = bdsesh;
+            document.frn.dodge.value = bdsesh;
+            document.frn.sneak.value = bdsesh;
+            document.frn.escape.value = bdsesh;
+            document.frn.steal.value = bdsesh;
+            document.frn.hide.value = bdsesh;
+
+            document.frn.attack.value = 45 + 2 * dex + 1.25 * wil;
+            document.frn.missile.value = 45 + 2 * per + 1.25 * dex;
+            document.frn.pick.value = 45 + 2 * inte + 1.25 * dex;
+            document.frn.search.value = 45 + 2 * inte + 1.25 * per;
+            document.frn.piercing.value = 46 + 1.4 * dex + per + 0.67 * str;
+
+            document.frn.envenom.value = 32 + 2 * dex + 1.25 * inte;
+            var det = 50 + 1.5 * inte + wis + 0.67 * per;
+            document.frn.detectmagic.value = det;
+            document.frn.burninghands.value = det;
+            document.frn.burninghands2.value = det;
+            document.frn.burninghands3.value = det;
+            document.frn.lightningbolt.value = det;
+            document.frn.lightningbolt2.value = det;
+            document.frn.lightningbolt3.value = det;
+            document.frn.lightningbolt4.value = det;
+            document.frn.calllightning.value = det;
+
+            var loc = 50 + 1.5 * inte + wis + 0.67 * wil;
+            document.frn.locate.value = loc;
+            document.frn.locate2.value = loc;
+            document.frn.locate3.value = loc;
+
+            var create = 50 + 2 * inte + 1.25 * wis;
+            document.frn.createlight.value = create;
+            document.frn.armour.value = create;
+            document.frn.armour2.value = create;
+            document.frn.armour3.value = create;
+            document.frn.armour4.value = create;
+            document.frn.enchant.value = create;
+            document.frn.shroud.value = create;
+            var create2 = 50 + 2 * inte + 1.25 * wil;
+            document.frn.blockdoor.value = create2;
+            document.frn.teleport.value = create2;
+            document.frn.dispelmagic.value = create2;
+            document.frn.dispelmagic2.value = create2;
+            document.frn.charm.value = create2;
+            document.frn.charm2.value = create2;
+
+            var cure = 50 + 1.875 * wis + 1.25 * inte;
+            document.frn.curelight.value = cure;
+            document.frn.cure.value = cure;
+            document.frn.cure2.value = cure;
+            document.frn.cure3.value = cure;
+            document.frn.cure4.value = cure;
+            document.frn.cure5.value = cure;
+            document.frn.heal.value = cure;
+            document.frn.heal2.value = cure;
+            document.frn.sanctuary.value = cure;
+            document.frn.create.value = cure;
+            document.frn.create2.value = cure;
+            document.frn.bob.value = cure;
+            document.frn.bob2.value = cure;
+
+            document.frn.bless.value = 45 + 1.5 * wis + inte + 0.67 * wil;
+            document.frn.senselife.value = 37.5 + 1.5 * wis + inte + 0.67 * wil;
+
+            var blind = 50 + 1.875 * wis + 1.25 * wil;
+            document.frn.blindness.value = blind;
+            document.frn.removecurse.value = blind;
+            document.frn.removecurse2.value = blind;
+            document.frn.dispelevil.value = blind;
+            document.frn.fear.value = blind;
+            document.frn.summon.value = blind;
+            document.frn.transfer.value = blind;
+            document.frn.transfer2.value = blind;
+
+            // NEW mandor
+            //document.frn.ageman.value = 23+inte-str;
+            //document.frn.hits.value = 24+con/2;
+            //document.frn.hitsregen.value = 4.255555555+con*0.055555555;
+            //document.frn.mana.value = mana
+            //document.frn.manaregen.value = 8.6+(inte-8)*0.4+(wis-8)*0.4+(wil-8)*0.5;
+            //var mana = 4*inte+4*wis-15;
+            //document.frn.manap.value= mana;
+
+            computeDiff()
+        }
+
+        function updateStats2(theStats) {
+            for (var i = 1; i <= theStats.length; i++) {
+                eval("document.statForm.rstat" + i + ".value = theStats[i-1] + raceModifiers[i-1] + ageModifiers[i-1]")
+            }
+            computeDiff()
+        }
+
+        function addStatsToListT(theForm) {
+            var currentStats = new Array
+            //  var tmp = "(" + MUMEVERSION + ") "
+            var tmp = ""
+            var sum = 0
+            //  for (var i = 0;i < tmpStats.length; i++) {
+            sum = tmpStats[0] + raceModifiers[0]
+            if (sum < 10) {
+                sum = " " + sum
+            }
+            //    tmp += sum + ", "
+            //  }
+            tmp += "Str:" + sum
+            sum = tmpStats[1] + raceModifiers[1]
+            if (sum < 10) {
+                sum = " " + sum
+            }
+            tmp += " Int:" + sum
+            sum = tmpStats[2] + raceModifiers[2]
+            if (sum < 10) {
+                sum = " " + sum
+            }
+            tmp += " Wis:" + sum
+            sum = tmpStats[3] + raceModifiers[3]
+            if (sum < 10) {
+                sum = " " + sum
+            }
+            tmp += " Dex:" + sum
+            sum = tmpStats[4] + raceModifiers[4]
+            if (sum < 10) {
+                sum = " " + sum
+            }
+            tmp += " Con:" + sum
+            sum = tmpStats[5] + raceModifiers[5]
+            if (sum < 10) {
+                sum = " " + sum
+            }
+            tmp += " Wil:" + sum
+            sum = tmpStats[6] + raceModifiers[6]
+            if (sum < 10) {
+                sum = " " + sum
+            }
+            tmp += " Per:" + sum + "."
+
+
+            theForm.statListT.value = tmp + "\n" + theForm.statListT.value
+            // + "[" + statSum(tmpStats) + "] " + "(Mume " + MUMEVERSION + ") "+ playerRace  
+            theForm.statListT.value.fixed()
+        }
+
+        function changeAge(age) {
+            playerAge = age
+            if (age == "0") {
+                ageModifiers = new Array(0, 0, 0, 0, 0, 0, 0)
+            }
+            if (age == "1") {
+                ageModifiers = new Array(0, 1, -1, 1, 0, 1, 1)
+            }
+            if (age == "2") {
+                ageModifiers = new Array(1, 1, 0, 1, 1, 1, 1)
+            }
+            if (age == "3") {
+                ageModifiers = new Array(1, 1, 0, 0, 1, 1, 0)
+            }
+            if (age == "4") {
+                ageModifiers = new Array(0, 0, 1, 0, 0, 1, 0)
+            }
+            if (age == "5") {
+                ageModifiers = new Array(-1, 0, 1, -1, 0, 1, -1)
+            }
+            if (age == "6") {
+                ageModifiers = new Array(-1, 0, 2, -2, -1, 0, -2)
+            }
+            if (age == "7") {
+                ageModifiers = new Array(-2, -1, 2, -3, -2, 0, -3)
+            }
+            if (age == "1") {
+                var firstAge = lifeRange * 17
+            }
+            else {
+                var firstAge = lifeRange * ageBrackets[age]
+            }
+            if (age == "0") {
+                document.statForm.ageRange.value = ""
+            }
+            else {
+                if (age == "7") {
+                    var secondAge = "  "
+                }
+                else {
+                    var secondAge = (lifeRange * ageBrackets[++age]) - 1
+                }
+                document.statForm.ageRange.value = "(" + firstAge + "-" + secondAge + ")"
+            }
+            updateStats(tmpStats)
+            updateStats2(tmpStats2)
+        }
+
+        function changeRace(race) {
+            playerRace = race
+            if (race == "Black Numenorean") {
+                raceModifiers = new Array(0, 0, -1, 0, 0, -2, 0);
+                lifeRange = 1;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99 // What is the base stat sum for darkies ??? (i have one at 99)
+                }
+            }
+            if (race == "Dwarf") {
+                raceModifiers = new Array(1, 0, -1, -1, 1, 1, -1);
+                lifeRange = 2;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99
+                }
+            }
+            if (race == "Elf") {
+                raceModifiers = new Array(-1, 1, 0, 1, -1, -1, 1);
+                lifeRange = 3;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99
+                }
+            }
+            if (race == "Half-Elf") {
+                raceModifiers = new Array(-1, 0, 1, 0, 0, 0, 0);
+                lifeRange = 1;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99
+                }
+            }
+            if (race == "Hobbit") {
+                raceModifiers = new Array(-2, -1, 0, 1, 1, 1, 0);
+                lifeRange = 1.5;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99
+                }
+            }
+            if (race == "Human") {
+                raceModifiers = new Array(0, 0, 0, 0, 0, 0, 0);
+                lifeRange = 1;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99
+                }
+            }
+            if (race == "Orc") {
+                raceModifiers = new Array(2, -3, -2, 0, 2, -2, 0);
+                lifeRange = 2;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99 // What is the base stat sum for darkies ??? (i have one at 99)
+                }
+            }
+            if (race == "Troll") {
+                raceModifiers = new Array(7, -3, -3, -3, 4, -3, -2);
+                lifeRange = 2;
+                if (MUMEVERSION == 6) {
+                    maxPoints = 99 // What is the base stat sum for darkies ??? (i have one at 99)
+                }
+            }
+            changeAge(playerAge)
+            updateStats(tmpStats)
+            updateStats2(tmpStats2)
+        }
+
+        function computeDiff() {
+            var diff = 0;
+            for (var i = 0; i < tmpStats.length; i++) {
+                t1 = Math.abs(tmpStats[i] - tmpStats2[i]);
+                if (t1 == 1) {
+                    diff += 14.25;
+                }
+                else if (t1 == 2) {
+                    diff += 33.75;
+                }
+                else if (t1 == 3) {
+                    diff += 56.25;
+                }
+                else if (t1 == 4) {
+                    diff += 80.75;
+                }
+                else if (t1 == 5) {
+                    diff += 106.75;
+                }
+                else if (t1 == 6) {
+                    diff += 134.25;
+                }
+                else if (t1 == 7) {
+                    diff += 162.5;
+                }
+                else if (t1 == 8) {
+                    diff += 192;
+                }
+                else if (t1 == 9) {
+                    diff += 222.75;
+                }
+                else if (t1 == 10) {
+                    diff += 254;
+                }
+            }
+            document.statForm.diffToMain.value = Math.floor(diff);
+        }
+
+        function on(val) {
+            var itm = document.getElementById(val);
+            itm.style.display = "block";
+        }
+
+        function off(val) {
+            var itm = document.getElementById(val);
+            itm.style.display = "none";
+        }
+
+        function Browser() {
+            var ua, s, i;
+            this.isIE = false;
+            this.isNS = false;
+            this.version = null;
+            ua = navigator.userAgent;
+            s = "MSIE";
+            if ((i = ua.indexOf(s)) >= 0) {
+                this.isIE = true;
+                this.version = parseFloat(ua.substr(i + s.length));
+                return;
+            }
+            s = "Netscape6/";
+            if ((i = ua.indexOf(s)) >= 0) {
+                this.isNS = true;
+                this.version = parseFloat(ua.substr(i + s.length));
+                return;
+            }
+            // Treat any other "Gecko" browser as NS 6.1.
+            s = "Gecko";
+            if ((i = ua.indexOf(s)) >= 0) {
+                this.isNS = true;
+                this.version = 6.1;
+                return;
+            }
+        }
+        var browser = new Browser();
+        // Global object to hold drag information.
+        var dragObj = new Object();
+        dragObj.zIndex = 0;
+
+        function dragStart(event, id) {
+            var el;
+            var x, y;
+            // If an element id was given, find it. Otherwise use the element being
+            // clicked on.
+            if (id)
+                dragObj.elNode = document.getElementById(id);
+            else {
+                if (browser.isIE)
+                    dragObj.elNode = window.event.srcElement;
+                if (browser.isNS)
+                    dragObj.elNode = event.target;
+                // If this is a text node, use its parent element.
+                if (dragObj.elNode.nodeType == 3)
+                    dragObj.elNode = dragObj.elNode.parentNode;
+            }
+            // Get cursor position with respect to the page.
+            if (browser.isIE) {
+                x = window.event.clientX + document.documentElement.scrollLeft +
+                    document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                    document.body.scrollTop;
+            }
+            if (browser.isNS) {
+                x = event.clientX + window.scrollX;
+                y = event.clientY + window.scrollY;
+            }
+            // Save starting positions of cursor and element.
+            dragObj.cursorStartX = x;
+            dragObj.cursorStartY = y;
+            dragObj.elStartLeft = parseInt(dragObj.elNode.style.left, 10);
+            dragObj.elStartTop = parseInt(dragObj.elNode.style.top, 10);
+            if (isNaN(dragObj.elStartLeft)) dragObj.elStartLeft = 0;
+            if (isNaN(dragObj.elStartTop)) dragObj.elStartTop = 0;
+            // Update element's z-index.
+            dragObj.elNode.style.zIndex = ++dragObj.zIndex;
+            // Capture mousemove and mouseup events on the page.
+            if (browser.isIE) {
+                document.attachEvent("onmousemove", dragGo);
+                document.attachEvent("onmouseup", dragStop);
+                window.event.cancelBubble = true;
+                window.event.returnValue = false;
+            }
+            if (browser.isNS) {
+                document.addEventListener("mousemove", dragGo, true);
+                document.addEventListener("mouseup", dragStop, true);
+                event.preventDefault();
+            }
+        }
+
+        function dragGo(event) {
+            var x, y;
+            // Get cursor position with respect to the page.
+            if (browser.isIE) {
+                x = window.event.clientX + document.documentElement.scrollLeft +
+                    document.body.scrollLeft;
+                y = window.event.clientY + document.documentElement.scrollTop +
+                    document.body.scrollTop;
+            }
+            if (browser.isNS) {
+                x = event.clientX + window.scrollX;
+                y = event.clientY + window.scrollY;
+            }
+            // Move drag element by the same amount the cursor has moved.
+            dragObj.elNode.style.left = (dragObj.elStartLeft + x - dragObj.cursorStartX) + "px";
+            dragObj.elNode.style.top = (dragObj.elStartTop + y - dragObj.cursorStartY) + "px";
+
+            if (browser.isIE) {
+                window.event.cancelBubble = true;
+                window.event.returnValue = false;
+            }
+            if (browser.isNS)
+                event.preventDefault();
+        }
+
+        function dragStop(event) {
+            // Clear the drag element global.
+            dragObj.elNode = null;
+            // Stop capturing mousemove and mouseup events.
+            if (browser.isIE) {
+                document.detachEvent("onmousemove", dragGo);
+                document.detachEvent("onmouseup", dragStop);
+            }
+            if (browser.isNS) {
+                document.removeEventListener("mousemove", dragGo, true);
+                document.removeEventListener("mouseup", dragStop, true);
+            }
+        }
+
+        //-->
+    </script>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <font>HELP FILES: &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a onclick="on('agewindow');"><u>Age</u></a> &nbsp; &nbsp;
+                            <a onclick="on('racewindow');"><u>Race</u></a>&nbsp; &nbsp;
+                            <a onclick="on('racewindow2');"><u>Racediff</u></a>&nbsp; &nbsp;
+                            <a onclick="on('racewindow3');"><u>Stats</u></a>
+                        </font>
+                        <hr>
+                        <form name="statForm">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Choose race:
+                                            <select onchange="changeRace(this.options[this.selectedIndex].value)" name="theClass"> 
+                                                <option value="Black Numenorean">Black N&uacute;men&oacute;rean (*)</option>
+                                                <option value="Dwarf">Dwarf</option>
+                                                <option value="Elf">Elf</option>
+                                                <option value="Half-Elf">Half-Elf</option> 
+                                                <option value="Hobbit">Hobbit</option>
+                                                <option value="Human" selected>Human</option>
+                                                <option value="Orc">Orc (*)</option>
+                                                <option value="Troll">Troll (*)</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <font>The races with (*) after are much harder to play</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Choose age:
+                                            <select onchange="changeAge(this.options[this.selectedIndex].value)" name="theAge"> 
+                                                <option value="0" selected>No age modiefier</option> 
+                                                <option value="1">1st age</option>
+                                                <option value="2">2nd age</option> 
+                                                <option value="3">3rd age</option>
+                                                <option value="4">4th age</option> 
+                                                <option value="5">5th age</option>
+                                                <option value="6">6th age</option> 
+                                                <option value="7">7th age</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input name="ageRange"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <hr>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <font>Stat generator</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <font>Str</font>
+                                        </td>
+                                        <td>
+                                            <font>Int</font>
+                                        </td>
+                                        <td>
+                                            <font>Wis</font>
+                                        </td>
+                                        <td>
+                                            <font>Dex</font>
+                                        </td>
+                                        <td>
+                                            <font>Con</font>
+                                        </td>
+                                        <td>
+                                            <font>Wil</font>
+                                        </td>
+                                        <td>
+                                            <font>Per</font>
+                                        </td>
+                                        <td>
+                                            <font>
+                                                <input name="pointsSum">
+                                            </font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input name="stat1"> </td>
+                                        <td>
+                                            <input name="stat2"> </td>
+                                        <td>
+                                            <input name="stat3"> </td>
+                                        <td>
+                                            <input name="stat4"> </td>
+                                        <td>
+                                            <input name="stat5"> </td>
+                                        <td>
+                                            <input name="stat6"> </td>
+                                        <td>
+                                            <input name="stat7"> </td>
+                                        <td>
+                                            <input name="pointsLeft"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input onclick="dec(1)" type="button" value="-">
+                                            <input onclick="inc(1)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec(2)" type="button" value="-">
+                                            <input onclick="inc(2)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec(3)" type="button" value="-">
+                                            <input onclick="inc(3)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec(4)" type="button" value="-">
+                                            <input onclick="inc(4)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec(5)" type="button" value="-">
+                                            <input onclick="inc(5)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec(6)" type="button" value="-">
+                                            <input onclick="inc(6)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec(7)" type="button" value="-">
+                                            <input onclick="inc(7)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="resetStats()" type="button" value="Reset stats">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <hr>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <font>Reroll calculator</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <font>Str</font>
+                                        </td>
+                                        <td>
+                                            <font>Int</font>
+                                        </td>
+                                        <td>
+                                            <font>Wis</font>
+                                        </td>
+                                        <td>
+                                            <font>Dex</font>
+                                        </td>
+                                        <td>
+                                            <font>Con</font>
+                                        </td>
+                                        <td>
+                                            <font>Wil</font>
+                                        </td>
+                                        <td>
+                                            <font>Per</font>
+                                        </td>
+                                        <td>
+                                            <font>
+                                                <input name="pointsSum2">
+                                            </font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input name="rstat1"> </td>
+                                        <td>
+                                            <input name="rstat2"> </td>
+                                        <td>
+                                            <input name="rstat3"> </td>
+                                        <td>
+                                            <input name="rstat4"> </td>
+                                        <td>
+                                            <input name="rstat5"> </td>
+                                        <td>
+                                            <input name="rstat6"> </td>
+                                        <td>
+                                            <input name="rstat7"> </td>
+                                        <td>
+                                            <input name="pointsLeft2"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input onclick="dec2(1)" type="button" value="-">
+                                            <input onclick="inc2(1)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec2(2)" type="button" value="-">
+                                            <input onclick="inc2(2)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec2(3)" type="button" value="-">
+                                            <input onclick="inc2(3)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec2(4)" type="button" value="-">
+                                            <input onclick="inc2(4)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec2(5)" type="button" value="-">
+                                            <input onclick="inc2(5)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec2(6)" type="button" value="-">
+                                            <input onclick="inc2(6)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="dec2(7)" type="button" value="-">
+                                            <input onclick="inc2(7)" type="button" value="+">
+                                        </td>
+                                        <td>
+                                            <input onclick="copyStats()" type="button" value="Copy from above">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <font>
+                                                <input value="Diff (max 100):" name="diffSum">
+                                            </font>
+                                        </td>
+                                        <td>
+                                            <input name="diffToMain"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <hr>
+                                        </td>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr>
+                                        <td>
+                                            <input onclick="addStatsToListT(this.form)" type="button" value="Add stats to list">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea name="statListT" rows="6" cols="56"></textarea> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input onclick="this.form.statListT.value=''" type="button" value="Clear stats list">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </td>
+                    <!-- added by frn -->
+                    <form name="frn">
+                        <td>
+                            <p>&nbsp;
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Puke-mages&nbsp;only!</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <font color="#00ff00">HPs:</font>
+                                            </td>
+                                            <td>
+                                                <input name="hps">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <font color="#00ff00">Mana:</font>
+                                            </td>
+                                            <td>
+                                                <input name="manap">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                            <p>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>BN-mages&nbsp;only!</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <font color="#00ff00">HPs:</font>
+                                            </td>
+                                            <td>
+                                                <input name="hpsb">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <font color="#00ff00">Mana:</font>
+                                            </td>
+                                            <td>
+                                                <input name="manapb">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                            <p>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Humans only, 2 age</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <font color="#00ff00">Moves:</font>
+                                            </td>
+                                            <td>
+                                                <input name="moves">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                            <p>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Awareness:</td>
+                                            <td>
+                                                <input name="awareness">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Climb:</td>
+                                            <td>
+                                                <input name="climb">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>first:</td>
+                                            <td>
+                                                <input name="first">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>leadership:</td>
+                                            <td>
+                                                <input name="leadership">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>ride:</td>
+                                            <td>
+                                                <input name="ride">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>swim:</td>
+                                            <td>
+                                                <input name="swim">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <font color="#00ff00">track:</font>
+                                            </td>
+                                            <td>
+                                                <input name="track">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <font color="#00ff00">wilderness:</font>
+                                            </td>
+                                            <td>
+                                                <input name="wilderness">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br/>
+                                <br/>
+                            </p>
+                            <td>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Bash:</td>
+                                            <td>
+                                                <input name="bash">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cleaving:</td>
+                                            <td>
+                                                <input name="cleaving">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Concussion:</td>
+                                            <td>
+                                                <input name="concussion">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smite:</td>
+                                            <td>
+                                                <input name="smite">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Endurance:</td>
+                                            <td>
+                                                <input name="endurance">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parry:</td>
+                                            <td>
+                                                <input name="parry">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rescue:</td>
+                                            <td>
+                                                <input name="rescue">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Slashing:</td>
+                                            <td>
+                                                <input name="slashing">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Stabbing:</td>
+                                            <td>
+                                                <input name="stabbing">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Backstab:</td>
+                                                <td>
+                                                    <input name="backstab">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dodge:</td>
+                                                <td>
+                                                    <input name="dodge">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sneak:</td>
+                                                <td>
+                                                    <input name="sneak">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Escape:</td>
+                                                <td>
+                                                    <input name="escape">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Steal:</td>
+                                                <td>
+                                                    <input name="steal">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hide:</td>
+                                                <td>
+                                                    <input name="hide">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Attack:</td>
+                                                <td>
+                                                    <input name="attack">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Missile:</td>
+                                                <td>
+                                                    <input name="missile">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pick:</td>
+                                                <td>
+                                                    <input name="pick">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Piercing:</td>
+                                                <td>
+                                                    <input name="piercing">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Search:</td>
+                                                <td>
+                                                    <input name="search">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Envenom:</td>
+                                                <td>
+                                                    <input name="envenom">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br/>
+                                </p>
+                            </td>
+                            <td>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Detect&nbsp;magic:</td>
+                                            <td>
+                                                <input name="detectmagic">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Burning&nbsp;hands:</td>
+                                            <td>
+                                                <input name="burninghands">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shocking&nbsp;grasp:</td>
+                                            <td>
+                                                <input name="burninghands2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Detect&nbsp;invisibility:</td>
+                                            <td>
+                                                <input name="burninghands3">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lightning&nbsp;bolt:</td>
+                                            <td>
+                                                <input name="lightningbolt">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Colour&nbsp;spray:</td>
+                                            <td>
+                                                <input name="lightningbolt2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fireball:</td>
+                                            <td>
+                                                <input name="lightningbolt3">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Identify:</td>
+                                            <td>
+                                                <input name="lightningbolt4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Call&nbsp;lightning:</td>
+                                            <td>
+                                                <input name="calllightning">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Locate:</td>
+                                            <td>
+                                                <input name="locate">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Locate&nbsp;life:</td>
+                                            <td>
+                                                <input name="locate2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Control&nbsp;weather:</td>
+                                            <td>
+                                                <input name="locate3">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Create&nbsp;light:</td>
+                                            <td>
+                                                <input name="createlight">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Armour:</td>
+                                            <td>
+                                                <input name="armour">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shield:</td>
+                                            <td>
+                                                <input name="armour2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Store:</td>
+                                            <td>
+                                                <input name="armour3">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quake:</td>
+                                            <td>
+                                                <input name="armour4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Enchant:</td>
+                                            <td>
+                                                <input name="enchant">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shroud:</td>
+                                            <td>
+                                                <input name="shroud">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Block&nbsp;door:</td>
+                                            <td>
+                                                <input name="blockdoor">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Teleport:</td>
+                                            <td>
+                                                <input name="teleport">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dispel&nbsp;magic:</td>
+                                            <td>
+                                                <input name="dispelmagic">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Portal:</td>
+                                            <td>
+                                                <input name="dispelmagic2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Charm:</td>
+                                            <td>
+                                                <input name="charm">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sleep:</td>
+                                            <td>
+                                                <input name="charm2">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cure&nbsp;light:</td>
+                                            <td>
+                                                <input name="curelight">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cure&nbsp;serious:</td>
+                                            <td>
+                                                <input name="cure">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cure&nbsp;blind:</td>
+                                            <td>
+                                                <input name="cure2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cure&nbsp;critic:</td>
+                                            <td>
+                                                <input name="cure3">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rem&nbsp;poison:</td>
+                                            <td>
+                                                <input name="cure4">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rem&nbsp;curse:</td>
+                                            <td>
+                                                <input name="cure5">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Heal:</td>
+                                            <td>
+                                                <input name="heal">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Strength:</td>
+                                            <td>
+                                                <input name="heal2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sanctuary:</td>
+                                            <td>
+                                                <input name="sanctuary">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Create&nbsp;food:</td>
+                                            <td>
+                                                <input name="create">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Create&nbsp;water:</td>
+                                            <td>
+                                                <input name="create2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bob:</td>
+                                            <td>
+                                                <input name="bob">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Harm:</td>
+                                            <td>
+                                                <input name="bob2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bless:</td>
+                                            <td>
+                                                <input name="bless">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sense&nbsp;life:</td>
+                                            <td>
+                                                <input name="senselife">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Blindness:</td>
+                                            <td>
+                                                <input name="blindness">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rem&nbsp;curse:</td>
+                                            <td>
+                                                <input name="removecurse">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Break&nbsp;door:</td>
+                                            <td>
+                                                <input name="removecurse2">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dispel&nbsp;evil:</td>
+                                            <td>
+                                                <input name="dispelevil">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fear:</td>
+                                            <td>
+                                                <input name="fear">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Summon:</td>
+                                            <td>
+                                                <input name="summon">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Transfer:</td>
+                                            <td>
+                                                <input name="transfer">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Word:</td>
+                                            <td>
+                                                <input name="transfer2">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </td>
+                    </form>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script language="Javascript">
+        changeVersion(7);
+    </script>
+
+    <table id="agewindow" style="position:absolute; left:300; top:200; z-level:0; display:none">
+        <tr>
+            <td>
+                <span style="cursor:pointer; cursor:move" onmousedown="dragStart(event, 'agewindow')">
+                    <img src="images/left.gif" height="20" width="50"/>
+                    <img src="images/mid.gif" height="20" width="196"/>
+                    <img src="images/vx.gif" height="20" width="20"/>
+                </span>
+                <span onmousedown="off('agewindow')">
+                    <img src="images/x.gif" height="20" width="20"/>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <pre> 
+ Age:   18, 24, 32, 40, 50, 65, 90
+ STR     0,  1,  1,  0, -1, -1, -2
+ INT     1,  1,  1,  0,  0,  0, -1
+ WIS    -1,  0,  0,  1,  1,  2,  2
+ DEX     1,  1,  0,  0, -1, -2, -3
+ CON     0,  1,  1,  0,  0, -1, -2
+ WIL     1,  1,  1,  1,  1,  0,  0
+ PER     1,  1,  0,  0, -1, -2, -3
+ Mana   -5, -3,  0,  3,  7, 15, 10
+ Hit    14, 16, 12, 10,  8,  4, -6
+ Move   10, 10,  5,  0, -5,-12,-15
+ +Mana   0,  1,  3,  6,  8, 10,  6
+ +Hit    3,  2,  1,  0, -1, -2, -5
+ +Move   3,  3,  2,  1, -3, -6, -9
+                </pre>
+            </td>
+        </tr>
+    </table>
+    <table id="racewindow" style="position:absolute; left:300; top:200; z-level:0; display:none">
+        <tr>
+            <td>
+                <span style="cursor:pointer; cursor:move" onmousedown="dragStart(event, 'racewindow')">
+                <img src="images/left.gif" height="20" width="50"/>
+                <img src="images/mid.gif" height="20" width="360"/>
+                <img src="images/vx.gif" height="20" width="20"/>
+            </span>
+                <span onmousedown="off('racewindow')">
+                <img src="images/x.gif" height="20" width="20"/>
+            </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <pre>          
+           STR   INT   WIS   DEX   CON   WIL   PER   AGE
+-------------------------------------------------------
+Man        --    --    --    --    --    --    --
+  Dunadan                                           1.5
+  Other                                             1.0
+Elf        -1    +1    --    +1    -1    -1    +1
+  Noldo                                             3.5
+  Sinda                                             3.0
+  Silvan                                            2.5
+Half-Elf   -1    --    +1    --    --    --    --   2.0
+Dwarf      +1    --    -1    -1    +1    +1    -1   2.0
+Hobbit     -2    -1    --    +1    +1    +1    --   1.5
+-------------------------------------------------------
+Orc (*)    +2    -3    -2    --    +2    -2    --   2.0
+Troll      +7    -3    -3    -3    +4    -3    -2   2.0
+Numenorean --    --    -1    --    --    -2    --   1.5
+-------------------------------------------------------
+            </pre>
+            </td>
+        </tr>
+    </table>
+    <table id="racewindow2" style="position:absolute; left:300; top:200; z-level:0; display:none">
+        <tr>
+            <td>
+                <span style="cursor:pointer; cursor:move" onmousedown="dragStart(event, 'racewindow2')">
+                <img src="images/left.gif" height="20" width="50"/>
+                <img src="images/mid.gif" height="20" width="360"/>
+                <img src="images/vx.gif" height="20" width="20"/>
+            </span>
+                <span onmousedown="off('racewindow2')">
+                    <img src="images/x.gif" height="20" width="20"/>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <pre>
+            Hp    Hp+   Ma    Ma+   Mo    Mo+
+-------------------------------------------------------
+Man        --    --    --    --    --    --
+Elf        -3   -1.1   --    +2    -5   -2.6
+Half-Elf   -1   -0.6   --    +1    -5   -2.2
+Dwarf      +2   +1.0   --    -1    +5   -0.3
+Hobbit     --   +0.5   --    -3   -10   -2.2
+-------------------------------------------------------
+Orc (*)   +13   +1.3   --    --    +5   -3.2 
+Troll      
+Numenorean -2   -0.1   --    +1    --   +1.0
+-------------------------------------------------------
+</pre>
+            </td>
+        </tr>
+    </table>
+    <table id="racewindow3" style="position:absolute; left:300; top:200; z-level:0; display:none">
+        <tr>
+            <td>
+                <span style="cursor:pointer; cursor:move" onmousedown="dragStart(event, 'racewindow3')">
+                <img src="images/left.gif" height="20" width="50"/>
+                <img src="images/mid.gif" height="20" width="360"/>
+                <img src="images/vx.gif" height="20" width="20"/>
+            </span>
+                <span onmousedown="off('racewindow3')">
+                <img src="images/x.gif" height="20" width="20"/>
+            </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <pre>
+            Str   Int   Wis   Dex   Con   Wil   Per
+-------------------------------------------------------
+Age (years)  -1    +1    --    --    --    --    --
+Hits         --    --    --    --    +1    --    --
+Hitregen     --    --    --    --  +0.1    --    --
+Mana         --    +3    +3    --    --    --    --
+Manaregen    --  +0.4  +0.4    --    --  +0.5    --
+Move         --    --    --  +1.3  +1.3    --    --
+Moveregen    --    --    --  +0.2  +0.9    --    --
+DB           --    --    --  +2.0    --    --    --
+OB         +0.7    --    --    --    --    --    -- 
+-------------------------------------------------------
+</pre>
+            </td>
+        </tr>
+    </table>
+    Original copyright &copy; 2001-2007 BSC (at) mandor (dot) se
+</body>
+
+</html>

@@ -52,7 +52,12 @@
     quaff scorched
 }    
 
-#alias {bob} {get ivory all;recite ivory}
+#alias {bob} {get vellum all;recite vellum}
 
 #alias {ds} {get ornate pack;draw ornate}
 
+#alias {crc} {get garnet-ring all;remove ruby-ring;wear garnet-ring;use garnet-ring;remove garnet-ring;wear ruby-ring;put garnet-ring pack}
+
+#alias {purple} {get purple all;recite purple}
+
+#alias ur {get rock all;use rock}
