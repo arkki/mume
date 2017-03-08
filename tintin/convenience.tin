@@ -33,4 +33,4 @@
 
 #action {^Aldereon says 'Tell me, do you agree to this?'$} {say yes}
 
-#action {^WARNING: inactivity timeout in 5 seconds.$} {score}
+#action {^WARNING: inactivity timeout in 5 seconds.$} {scor}
