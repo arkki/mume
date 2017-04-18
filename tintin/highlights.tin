@@ -75,3 +75,8 @@
 #highlight {^%* struggles for air as a great, dark spider weaves the last thread of a silky cocoon around %* body.$} {red reverse b white}
 #highlight {^You stagger for your balance as a great, dark spider wraps the sticky cords faster and faster around you!} {red reverse b white}
 #highlight {^You can't escape the spider's sticky grasp!} {red reverse b white}
+
+#highlight {^You'd like to draw a fresh breath, but you feel able to stay here a bit longer.$} {yellow}
+#highlight {^You feel your lungs are bursting, so BADLY do you need to breathe!$} {red}
+#highlight {^You fail swimming, and feel weaker.$} {red}
+#highlight {^You feel VERY tired.$} {red reverse b white}

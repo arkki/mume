@@ -1,6 +1,9 @@
 #alias boots {remove boots;get boots backpack;wear boots;put boots backpack}
 #alias shoes {remove boots;get snowshoes backpack;wear snowshoes;put boots backpack}
 
+#alias fur {remove cloak;get fur backpack;wear fur;put cloak backpack}
+#alias cloak {remove cloak;remove fur;get cloak backpack;wear cloak;put cloak backpack;put fur backpack}
+
 #alias {oxc} {open chest;examine chest}
 
 #alias hp {#tick hp {info HP: %z/%Z, Mana: %e/%E, Moves: %j/%J} 10}
@@ -38,26 +41,29 @@
 }
 
 #alias {qf} {
-	get draught pack;
+	get draught all;
 	quaff draught
 }
 
 #alias {qd} {
-	get zaugurz-draught pack;
+	get zaugurz-draught all;
 	quaff zaugurz-draught
 }
 
 #alias qsc {
-    get scorched pack;
+    get scorched all;
     quaff scorched
 }    
 
-#alias {bob} {get vellum all;recite vellum}
+#alias {ds} {get giant all;draw giant}
 
-#alias {ds} {get ornate pack;draw ornate}
+#alias {purp} {get purple all;recite purple}
 
-#alias {crc} {get garnet-ring all;remove ruby-ring;wear garnet-ring;use garnet-ring;remove garnet-ring;wear ruby-ring;put garnet-ring pack}
-
-#alias {purple} {get purple all;recite purple}
+#alias {azure} {get azure all;recite azure}
 
 #alias ur {get rock all;use rock}
+
+
+#alias {mix-heal} {get sage all;get sage all;get foxtail all;get blackcurrant all;get athelas all;put all bag}
+
+#alias {pw} {remove shield;hold vial;poison dagger;remove vial;hold shield}

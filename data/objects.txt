@@ -50,6 +50,7 @@
 +Purple scroll               10  Magic, Level 20 cure blindness, sanctuary, and poison, nosell
 +Obsidian eye                45  Magic, Level 24 blindness, 3 charges, Nosell, Norent
 +Vellum scroll               45  Bless, Level 25 protection from evil, bless, and breath of briskness
++Azure scroll                25  12000  Magic, Nosell, Level 10 heal
 +Scroll which reads "ysafg"  35  Magic, Level 25 fear
 +Ivory scroll (rune "E")     25  Magic, Level 20 heal, divination, and sense life, Nosell
 +Ivory scroll (rune "M")     25  Magic, Level 20 blindness, protection from evil, strength, Nosell
@@ -70,7 +71,7 @@
 +Small pouch                 45  All in room expect yourself paralyze for 3-4 secs
 +Fragile parchment           10  Magic, Turns back damage from both lightnings
 +Deep black orb             660  Magic, Evil, Anti-good, Eff v light
-+Palantir of Amon Sûl      4840  Magic, Bless, Nosell
++Palantir of Amon Sï¿½l      4840  Magic, Bless, Nosell
 
 +Softly glowing green cup    20  Magic, Nosell
                                  It increases mana by 10 and mana regeneration by 10 for 2 hours.

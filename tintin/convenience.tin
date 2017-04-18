@@ -1,7 +1,3 @@
-#alias ferry {#action {arrived in} {leave; #unaction {arrived in}};#action {arrived at} {board; #unaction {arrived at}}}
-
-#action {^The tanner gives you a wolfskin wristband.$} {give fur tanner}
-
 #action { n:%w} {#tab %1}
 #action { s:%w} {#tab %1}
 #action { e:%w} {#tab %1}
@@ -13,24 +9,13 @@
 #action {^You lie down on the bed and go to sleep.$} {hp}
 #action {^You wake, and sit up.$} {unhp; stand}
 #action {^You wake, and sit up on the bed.$} {unhp; stand}
-#action {^You are awakened by %S.$} stand
-#action {^Nah... You feel too relaxed to do that.$} stand
-#action {^Maybe you should get on your feet first?$} stand
 
 #alias rep {info REPORT: HP: %z/%Z, Mana: %e/%E, Moves: %j/%J}
 #action {^REPORT: %+$} {#line gag;emote reports '%1'}
-
-#alias {cp} {wield %1;crush %1;drawmyweapon}
-#action {^You have produced %* petals.$} {ph petals}
-#action {^You have produced %* leaves.$} {ph leaves}
-#action {^You have produced a sticky mass of stems, leaves and sap.$} {ph stems}
 
 #action {%* seems to be blinded!$} {#delay 90 {#echo {<019>%1 was blinded 90s ago.<099>}}}
 
 #alias xpon {#class xp read tintin/xp.tin}
 #alias xpoff {#class xp kill}
-
-
-#action {^Aldereon says 'Tell me, do you agree to this?'$} {say yes}
 
 #action {^WARNING: inactivity timeout in 5 seconds.$} {scor}
