@@ -1,0 +1,23 @@
+`alias exp info Exp: %X [%T] (total: %x [%t])
+alias pk trophy
+alias ta label & k
+alias k kill & k
+alias bc butcher &corpse
+alias ec exa &corpse
+alias gac get all corpse
+alias ga get all
+alias gaa get all all.corpse
+alias ek exa k
+alias ck con k
+alias sco scout
+alias score info
+alias fq flush q
+alias rt rev t
+alias r rev n
+alias coa cha mood agg
+alias cow cha mood wim
+alias cop cha mood pru
+alias cob cha mood bra
+alias cw cha wimpy &
+alias tsr tell sauron &
+alias g get all.coins all.corpse`
