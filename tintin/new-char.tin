@@ -1,4 +1,4 @@
-`alias exp info Exp: %X [%T] (total: %x [%t])
+alias exp info Exp: %X [%T] (total: %x [%t])
 alias pk trophy
 alias ta label & k
 alias k kill & k
@@ -20,4 +20,5 @@ alias cop cha mood pru
 alias cob cha mood bra
 alias cw cha wimpy &
 alias tsr tell sauron &
-alias g get all.coins all.corpse`
+alias g get all.coins all.corpse
+cha eq WS Hbahlfc nwF -q B
