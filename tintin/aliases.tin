@@ -1,8 +1,9 @@
-#alias boots {remove boots;get boots backpack;wear boots;put boots backpack}
-#alias shoes {remove boots;get snowshoes backpack;wear snowshoes;put boots backpack}
+#alias boots {remove boots;get boots pack;wear boots;put boots pack}
+#alias shoes {remove boots;get snowshoes pack;wear snowshoes;put boots pack}
+#alias gloves {remove gloves;get gloves pack;wear gloves;put gloves pack}
 
-#alias fur {remove cloak;get fur backpack;wear fur;put cloak backpack}
-#alias cloak {remove cloak;remove fur;get cloak backpack;wear cloak;put cloak backpack;put fur backpack}
+#alias fur {remove cloak;get fur pack;wear fur;put cloak pack}
+#alias cloak {remove cloak;remove fur;get cloak pack;wear cloak;put cloak pack;put fur pack}
 
 #alias {oxc} {open chest;examine chest}
 
@@ -60,6 +61,8 @@
 #alias {purp} {get purple all;recite purple}
 
 #alias {azure} {get azure all;recite azure}
+
+#alias {fragile} {get fragile all;recite fragile}
 
 #alias ur {get rock all;use rock}
 
