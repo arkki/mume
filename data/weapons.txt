@@ -4,7 +4,7 @@
   Enchanted arrows are non-breakable.
   Minimum STR needed to wield: for 1H - weight/15, for 2H - weight/22.5
   Eff vs adds 25% damage
-  # Means that the weapon might have changed, and new stats should be confirmed
+  * before are new ID's
 
 
          Weapon        Weight  OB  PB Dmg  (%) Rel. Other
@@ -24,6 +24,7 @@
 +Steel claymore           265  20   0 13.3 110 12.1 Magic, Eff vs spell
 +Black runed sceptre      175  10  25 12.5 110 11.4 Magic, Eff vs metal/spell, Focus, Nosell, Mana regenetation +5, Saving Spell -20
 +War mattock              400  20 -10 17   150 11.3 Magic, Eff vs metal/spell
+*Burnished hewing-spear   395  20   0 15   135 11.1 Magic, Eff vs spell/riding/spirit
 +Heavy warhammer          390  15 -10 15   135 11.1 Eff vs metal
 +Halberd                  350  15   5 14.5 130 11.1 Eff vs riding
 +Two-handed sword         350  20  -5 14.5 130 11.1
@@ -39,7 +40,10 @@
 +Quarterstaff             265  10  10  6   100  6.0 Eff vs spirit/metal
 +Metal-shod staff         970  15  25  8   150  5.3 Magic, Anti-good, Eff vs spirit/spell
 +Shovel                   220  15 -10  8   150  5.3 Eff vs metal
++Carved oak staff         485   5  10  7   150  4.7 Magic, Nosell
+   (unchanted)
 +Carved oak staff         485   5  15  8   150  5.3 Magic, Saving Spell -10, Nosell
+   (enchanted)
 +Rough staff              485   5  15  8   150  5.3 Eff vs spirit, Anti-evil/good, Saving Spell -10	(enchanted)
 +Black metal staff        220  10  25  5   100  5.0 Magic, Eff vs spell
 +Rough staff              485   5  10  7   150  4.7 Eff vs spirit	(not enchanted)
@@ -67,8 +71,8 @@
 +Engraved broadsword      195  10  10  9.2  90 10.2 Magic, Eff vs spirit/spell
 +Broadsword               175  10   5  9.1  90 10.1
 +Serrated scimitar        220  15   0 11.7 116 10.1
-#Dunadan blade            220  20   5 10.2 110  9.3 Magic, Anti-evil, Anti-neutral, Eff vs spell
-#Wightblade               220  20   5 10.2 110  9.3 Magic, Anti-good, Anti-neutral, Eff vs spell
++Dunadan blade            220  15  10  9.7 100  9.7 Magic, Anti-evil, Anti-neutral, Eff vs spell
++Wightblade               220  20   5 10.2 110  9.3 Magic, Anti-good, Anti-neutral, Eff vs spell
 +Longsword                220  20   0 10.2 110  9.3
 +Beorning sword           130  20   0  9.2 100  9.2
 +The Silvery Broadsword   130  15  10  8.3  90  9.2 Magic, Glow, Bless, Anti-evil, Nosell, Eff vs orc/spell
@@ -88,16 +92,18 @@
 
 +Axe of Durin             265  20   0 17.7 140 12.6 Magic, Nosell, Eff vs spell
 +Mighty dwarven axe       265  15  -5 13.7 110 12.5 Magic, Eff vs spell
++Wicked Durbûk-hai axe    220  15  -5 10.8  90 12.0
 +Darkened orkish axe      265  15  -5 14.1 120 11.8 Magic, Anti-good, Anti-neutral, Eff vs spell
 +Blackened dwarven axe    265  15  -5 12.6 110 11.5 Magic, Anti-evil, Anti-neutral, Eff vs spirit/spell
++Double-headed axe        255  20  -5 11.4 110 10.4
 +Brutal cleaver           220  10   0 12.5 120 10.4 non-enchantable
- Double-headed axe        255  20  -5 11.0 110 10.0
 +Battle axe               220  15   0 11.4 110 10.4
 +Black waraxe             130  15   0 10.3 100 10.3
 +Woodsman axe             175  10  -5 10.3 100 10.3
 +Handaxe                  130  15   0  8.2  90  9.1
 +Hatchet                  130  15  -5  7.2  90  8.0
 +Butcher's cleaver         45  -5  -5  5.2  80  6.5 Non-enchantable
+
 
 
                           Crushing Weapons
@@ -110,7 +116,7 @@
 +Ornate warhammer         265  20  -5 12.7 120 10.6 Magic, Eff vs metal/spell
 +Heavy morningstar        265  20 -10 11.5 110 10.5 Eff vs metal
 +Morningstar              220  15  -5 10.0 100 10.0 Eff vs metal
-#Engraved warhammer       265  20  -5 11.7 120  9.8 Magic, Eff vs metal/spell
++Engraved warhammer       265  20  -5 11.7 120  9.8 Magic, Eff vs metal/spell
    (Bonecrusher)
 +Large warhammer          220  15  -5 10.7 110  9.7 Eff vs metal
 +Warhammer                135  15  -5  9.6 100  9.6 Eff vs metal
@@ -137,10 +143,11 @@
 
 +The Elven shortsword with 90  15  10  8   100  8.0 Glow, Magic, Bless, Anti-evil, Nosell, Eff vs orc/troll/spell
    a runic incription (Sting)
++Nimble blade              25  15  -5  7    70 10.0 Magic
 +Engraved silvery knife    36  10  10  8   100  8.0 Magic, Eff vs spell, Saving Spell -10
 +Black runed dagger        45  15   5  8   100  8.0 Magic, Eff vs spell, Saving Spell -20
 +Dirk                      90  15   0  6    70  8.6
-#Elven dagger              90  10   0  8   100  8.0 Magic, Anti-evil, Anti-neutral, Eff vs spell
++Elven dagger              45  10   0  8   100  8.0 Anti-neutral
 +Nasty orcish fang         90  10   0  8   100  8.0
 +Spider's fang             90  10   0  8   100  8.0 Magic, Anti-good
 +Slender dagger            45  20   0  7   100  7.0 Magic, Eff vs spell
@@ -149,6 +156,7 @@
 +Sharp thorn               45  15   5  7   100  7.0 Eff vs spirit
 +Shortsword                90  15   0  7   100  7.0
 +Brown thorn               45  15   0  7   100  7.0 Eff vs spirit
++Severed spider's fang     90  10   0  7   100  7.0 Enchanted
 +Long, wicked knife        45  20   0  6   100  6.0 Evil
 +Shiny dagger              30  15   0  6   100  6.0 Pre-enchanted (10 OB, 1 damage)
 +Sacrificial knife         30  15   0  6   100  6.0 Pre-evil-enchanted (10 OB, 1 damage)
@@ -163,12 +171,13 @@
 +Hunting knife              6   0  -5  3   100  3.0 Non-enchantable
 
 
+
                           Stabbing Weapons
 
++Blackened spear          265  20  -5 12.8 120 10.7 Eff vs riding, Magic, Eff vs spirit/spell
 +Steel-shafted spear      175  10   0 11.7 115 10.2 Eff vs riding
 +Steel-tipped spear       132  20  -5 11.3 115  9.8 Eff vs riding
 +Giant spear              265  15  -5 12.3 125  9.8 Eff vs riding, Non-enchantable
-#Blackened spear          265  20  -5 11.7 120  9.7 Eff vs riding, Magic, non-enchantable
 +Elven hunting spear      130  15   0 10.6 110  9.6 Eff vs riding, Anti-evil
 +Pike                     195  20  -5 10.6 115  9.2 Eff vs riding
 +Broad spear              175  15  -5 10.6 115  9.2 Eff vs riding

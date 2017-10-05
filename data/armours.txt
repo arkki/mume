@@ -10,6 +10,8 @@
                                  Head
 
 +Dragonhelm                      395          100% 100  Magic, Bless, Eff vs fire/spell
++Silver morion			 265          92%  15	Magic, Bless (max 4 in game)
++Ancient, jewelled helmet        265          92%  14   Magic, Bless, Anti-evil, Anti-neutral, Nosell, Focus
 +Winged metal helmet             310  -1      90%  13
 +Large visored helmet            350          95%  12   Magic, Eff vs fire, Dwarves can use to bless/+2 str dwarves in gr
 +Horse-crested helm              350  -2      95%  12
@@ -18,6 +20,7 @@
 +Spiked metal helmet             310  -1      85%  12
 +Full metal helmet               310  -2      85%  12
 +White chain mail coif           265          65%  12
++Ancient metal helmet            175          85%  11   Magic
 +Horse-tail helm                 315  -1      85%  11
 +Metal helmet                    310  -2  -1  80%  11
 +Fine chain mail coif            190          65%  10
@@ -124,12 +127,15 @@
 +Guild-guard uniform              90       3
 +Plain cloak                     130       3
 +Fine lion pelt                  310       3           Eff vs cold
++Fine sable cloak                310       3
  Guardsman's cloak               450       3           Nosell
 +Huge black bear fur            1145   7               Eff vs fire/cold, Nosell
-+Cave-bear fur                   570   5               Eff vs cold
++Soot-black bear hide		 308   5
 +Black warg fur                  350   5
++Cave-bear fur                   570   5               Eff vs cold
 +Imposing, golden mantle         175   3               Magic, Move regen +5
 +Scorched, grisly fur            310   3               Magic, Move regen +5
++Woollen traveller's cloak       395   3               Magic, Move regen +2
 +Tawny bear fur                  840   3               Eff vs cold
 +Majestic, golden fur            350   2               Move regen +2
 +Brown bear fur                  925   2               Eff vs cold
@@ -169,6 +175,7 @@
 
                                  Hands
 
++Lobstered steel gauntlets       310          90%  15
 +Fine metal gauntlets            220  -1      90%  13
 +Sturdy metal gauntlets          220  -2      85%  12
 +White chain mail gloves         130  -1      65%  12
@@ -216,6 +223,7 @@
 +Fine metal boots                265      -1  90%  13  Move cost  -3%
 +Sturdy metal boots              265      -2  85%  12
 +Metal boots                     265      -3  80%  11
++Pair of knee-high hunting boots  90          60%   7  Move cost -16%, Magic
 +Fine rigid leather boots        175          80%   6  Move cost -12% 
 +Sturdy rigid leather boots      180          75%   5  Move cost  -9%
 +Rigid leather boots             175          70%   4  Move cost  -6%
@@ -236,9 +244,10 @@
 
                                  Belts
 
-+Gleaming belt                    19                   Magic, Move regen +5
-+Broad silver belt                25       2           Magic
-+Golden belt                      11       1           Magic, Move regen +2
+*Gleaming belt                    19       2           Magic, Move regen +3
+*Broad silver belt                25       3           Magic
+*Golden belt                      11                   Magic, Move regen +3, Saving Spell -10
++Belt of fell hide                39                   Magic, Move and HP regen +3
 +Belt of pearls and crystals       6
 +Plain silken sash                10
 +Snakeskin belt                   25

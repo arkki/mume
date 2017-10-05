@@ -5,7 +5,7 @@
 
 +Ancient dwarven shield      1715  35  Magic, Anti-evil
 +Defiled dwarven shield      1715  35  Evil magic, Anti-good, Anti-neutral, Eff vs light
-+Tower shield                1100  35  Magic
++Tower shield                1715  35  Magic
 +Smelly piece of worm hide    880  30  Magic, Saving Spell -10
 +Bejewelled shield            880  30  Magic, Saving Spell -10
 +Large metal wall shield     1450  30
@@ -40,4 +40,12 @@
 +Metal buckler                350  7
 +Wooden target shield         220  5
 +Small metal target shield    175  4
+*Spiked horsehide buckler     395  3   OB +3
 +Small wooden target shield   175  3
+
+
+---------
+
+  1 ounce = x2,75
+  1 pound = x44
+  1 stone = 14 pound
