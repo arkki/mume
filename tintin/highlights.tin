@@ -7,6 +7,7 @@
 #highlight {^You gain a level!$} {blue reverse b white}
 
 #highlight {corpse} {bold red}
+#highlight {red aura} {bold red}
 
 
 #highlight {R.I.P.} {bold yellow}
