@@ -56,8 +56,6 @@
     quaff scorched
 }    
 
-#alias {ds} {get giant all;draw giant}
-
 #alias {purp} {get purple all;recite purple}
 
 #alias {azure} {get azure all;recite azure}

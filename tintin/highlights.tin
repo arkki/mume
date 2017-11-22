@@ -81,3 +81,7 @@
 #highlight {^You feel your lungs are bursting, so BADLY do you need to breathe!$} {red}
 #highlight {^You fail swimming, and feel weaker.$} {red}
 #highlight {^You feel VERY tired.$} {red reverse b white}
+
+#highlight {; it glows red} {red}
+#highlight {; it glows blue} {blue}
+#highlight {[blue]} {blue}
