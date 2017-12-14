@@ -1,0 +1,8 @@
+#sub {^Two of the lockpicks have shallow notches on them.$}  {%0 [Assassin Guildmaster]}
+#sub {^A couple of lockpicks have a small bump near the tip.$} {%0 [Master Assassin]}
+#sub {^The edges of most picks have been carefully sharpened.$} {%0 [Angdil]}
+#sub {^The lockpicks are extremely well tempered.$} {%0 [Dwarven Locksmith]}
+#sub {^There is a strange lockpick, with a sharp protrusion on one side, in the set.$} {%0 [Kraksh]}
+#sub {^The lockpicks feel oddly light in your hand.$} {%0 [Grey Cloaked Man]}
+#sub {^Several of the picks have long, smooth grooves along their length.$} {%0 [Half-elven cut-throat]}
+#sub {^A finely shaped lockpick has been engraved with a white hand.$} {%0 [Saruman]}

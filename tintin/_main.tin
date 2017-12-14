@@ -38,6 +38,7 @@
 #read tintin/rip.tin
 #read tintin/months.tin
 #read tintin/data-keys.tin
+#read tintin/data-lockpicks.tin
 #read tintin/data-herbs.tin
 #read tintin/data-mobs.tin
 #read tintin/convenience.tin
@@ -46,7 +47,7 @@
 #read tintin/keymap.tin
 #read tintin/prompt.tin
 #read tintin/time.tin
-
+#read tintin/spell-timers.tin
 
 gg
 

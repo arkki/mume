@@ -1,0 +1,467 @@
+huge tarantula is a level 14 Multipede.
+You feel that there is a hidden power ruling her actions.
+She has a superb offensive, no defensive and a superb parrying.
+She finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+mountain lion is a level 15 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has a very good offensive, no defensive and an average parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+pony is a level 4 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has a very bad offensive, an awful defensive and an awful parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+grey-cloaked elven huntsman is a level 18 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a poor defensive and a fair parrying.
+He is a firm believer in the values of Right and Wrong.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+pack horse is a level 6 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has a bad offensive, an awful defensive and a very bad parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+mother wolf is a level 7 Multipede.
+You feel that there is a hidden power ruling her actions.
+She has a poor offensive, an awful defensive and a very bad parrying.
+She is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+young ranger is a level 8 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a poor offensive, a very bad defensive and a bad parrying.
+He is a firm believer in the values of Right and Wrong.
+Defenses: NORMAL MAN
+Attacks: NORMAL MAN
+
+clump of roots is a level 12 Root.
+You feel that there is a hidden power ruling its actions.
+It has a fair offensive, an awful defensive and an average parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL LR-SPELL WOOD
+Attacks: NORMAL WOOD
+
+giant lizard is a level 12 Snake.
+You feel that there is a hidden power ruling its actions.
+It has a fair offensive, a very bad defensive and a poor parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL COOL
+Attacks: NORMAL ANIMAL
+
+noble stag is a level 10 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has an average offensive, a very bad defensive and a bad parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+mottled snake is a level 12 Snake.
+You feel that there is a hidden power ruling its actions.
+It has a poor offensive, an awful defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+grizzly bear is a level 15 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a superb offensive, a bad defensive and a poor parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+thick tangle of vines is a level 14 Plant.
+You feel that there is a hidden power ruling its actions.
+It has a good offensive, no defensive and a good parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL WOOD FUEL
+Attacks: NORMAL WOOD
+
+dark wraith is a level 16 Spirit.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a bad defensive and a bad parrying.
+He is evil and could be a decent follower of Sauron.
+Defenses: NORMAL SPIRIT
+Attacks: NORMAL SPIRIT
+
+mountain lioness is a level 13 Multipede.
+You feel that there is a hidden power ruling her actions.
+She has a good offensive, a very bad defensive and a poor parrying.
+She finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+young mountain lion is a level 12 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a fair offensive, a very bad defensive and a poor parrying.
+It is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+great werewolf is a level 15 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has a very good offensive, a bad defensive and a poor parrying.
+He is evil and could be a decent follower of Sauron.
+Defenses: NORMAL SPIRIT ANIMAL
+Attacks: NORMAL SPIRIT ANIMAL
+
+black wolf is a level 7 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a poor offensive, an awful defensive and a very bad parrying.
+It is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+black raven is a level 6 Bird.
+You feel that there is a hidden power ruling its actions.
+It has a bad offensive, an awful defensive and a very bad parrying.
+It is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+rattlesnake is a level 15 Snake.
+You feel that there is a hidden power ruling its actions.
+It has a very good offensive, an average defensive and a very bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL
+Attacks: NORMAL
+
+hunter is a level 13 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a poor offensive, a very bad defensive and a poor parrying.
+He is a well-meaning person, always glad to help friends.
+Defenses: NORMAL MAN
+Attacks: NORMAL MAN
+
+boar is a level 8 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has an average offensive, a very bad defensive and a very bad parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+mountain goat is a level 4 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a very bad offensive, an awful defensive and an awful parrying.
+It is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+brown bear is a level 12 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a very good offensive, no defensive and a poor parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+wild bull is a level 8 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has an average offensive, an awful defensive and a very bad parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+animated skeleton is a level 7 Humanoid.
+You feel that there is a hidden power ruling its actions.
+It has a poor offensive, an awful defensive and a very bad parrying.
+It is a balanced individual with little concern for good or evil.
+Defenses: NORMAL SPIRIT
+Attacks: NORMAL SPIRIT
+
+hardened ranger is a level 18 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a bad defensive and a fair parrying.
+He must have been sent to Arda to free it from the sorrows that weigh upon it.
+Defenses: NORMAL MAN
+Attacks: NORMAL MAN
+
+orkish bodyguard is a level 18 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a very good offensive, an awful defensive and a fair parrying.
+He is totally corrupted by the Evilness of Morgoth!
+Defenses: NORMAL ORC
+Attacks: NORMAL ORC
+
+queen bat is a level 9 Bird.
+You feel that there is a hidden power ruling her actions.
+She has an average offensive, a very bad defensive and a bad parrying.
+She finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+black fungus is a level 10 Plant.
+You feel that there is a hidden power ruling its actions.
+It has an average offensive, a very bad defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL WOOD
+Attacks: NORMAL WOOD
+
+giant green fungus is a level 10 Plant.
+You feel that there is a hidden power ruling its actions.
+It has a fair offensive, no defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL WOOD
+Attacks: NORMAL WOOD
+
+tall stag is a level 5 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has a very bad offensive, an awful defensive and a very bad parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+huge, black wolf is a level 8 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has an average offensive, a very bad defensive and a very bad parrying.
+It is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+swift buck is a level 3 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has an awful offensive, an awful defensive and an awful parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+forest cat is a level 3 Multipede.
+You feel that there is a hidden power ruling her actions.
+She has an awful offensive, an awful defensive and an awful parrying.
+She is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+Bounder is a level 13 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a good offensive, a very bad defensive and a poor parrying.
+He is a firm believer in the values of Right and Wrong.
+Defenses: NORMAL HOBBIT
+Attacks: NORMAL HOBBIT
+
+Shirriff is a level 15 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a very good offensive, a bad defensive and an average parrying.
+He is a firm believer in the values of Right and Wrong.
+Defenses: NORMAL HOBBIT
+Attacks: NORMAL HOBBIT
+
+Captain is a level 15 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a good offensive, a bad defensive and a fair parrying.
+He is a well-meaning person, always glad to help friends.
+Defenses: NORMAL MAN
+Attacks: NORMAL MAN
+
+assassin is a level 16 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a fair offensive, an awful defensive and an average parrying.
+He finds a form of beauty in others' pains.
+Defenses: NORMAL MAN
+Attacks: NORMAL MAN
+
+thief is a level 14 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has an average offensive, a very bad defensive and a bad parrying.
+He finds a form of beauty in others' pains.
+Defenses: NORMAL MAN
+Attacks: NORMAL MAN
+
+broomrape plant is a level 8 Plant.
+You feel that there is a hidden power ruling its actions.
+It has a bad offensive, a very bad defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL
+Attacks: NORMAL
+
+heap of rooting stems is a level 8 Plant.
+You feel that there is a hidden power ruling its actions.
+It has a poor offensive, an awful defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL WOOD
+Attacks: NORMAL WOOD
+
+huge millipede is a level 10 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a fair offensive, a very bad defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+mass of buckthorn is a level 7 Plant.
+You feel that there is a hidden power ruling its actions.
+It has a poor offensive, an awful defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL
+Attacks: NORMAL
+
+grizzled werewolf is a level 11 Multipede.
+You feel that there is a hidden power ruling his actions.
+He has a fair offensive, a very bad defensive and a bad parrying.
+He finds a form of beauty in others' pains.
+Defenses: NORMAL SPIRIT ANIMAL
+Attacks: NORMAL SPIRIT ANIMAL
+
+vulture is a level 16 Bird.
+It has a superb offensive, a bad defensive and a bad parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+mighty brown bear is a level 20 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a superb offensive, no defensive and a fair parrying.
+It is a balanced individual with little concern for good or evil.
+Defenses: NORMAL LR-SPELL ANIMAL
+Attacks: NORMAL ANIMAL
+
+earth troll is a level 13 Humanoid.
+You feel that there is a hidden power ruling its actions.
+It has a very good offensive, no defensive and an average parrying.
+It finds a form of beauty in others' pains.
+Defenses: NORMAL TROLL GIANT
+Attacks: NORMAL TROLL GIANT
+
+cave troll is a level 18 Humanoid.
+You feel that there is a hidden power ruling its actions.
+It has a superb offensive, no defensive and a superb parrying.
+It is evil and could be a decent follower of Sauron.
+Defenses: NORMAL TROLL GIANT
+Attacks: NORMAL TROLL GIANT
+
+demon wolf is a level 17 Multipede.
+You feel that there is a hidden power ruling its actions.
+It has a very good offensive, no defensive and an average parrying.
+It is evil and could be a decent follower of Sauron.
+Defenses: NORMAL SPIRIT LR-SPELL ANIMAL
+Attacks: NORMAL SPIRIT ANIMAL
+
+mother eagle is a level 19 Bird.
+She has a superb offensive, no defensive and a poor parrying.
+She finds a form of beauty in others' pains.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+Anarwen is a level 18 Humanoid.
+You feel that there is a hidden power ruling her actions.
+She has a superb offensive, a poor defensive and a fair parrying.
+She must have been sent to Arda to free it from the sorrows that weigh upon it.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+elven huntsman is a level 18 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a poor defensive and a fair parrying.
+He is a firm believer in the values of Right and Wrong.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+elven archer is a level 13 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has an average offensive, a bad defensive and a poor parrying.
+He is a firm believer in the values of Right and Wrong.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+imposing beech tree is a level 19 Plant.
+You feel that there is a hidden power ruling its actions.
+It has a superb offensive, an awful defensive and a poor parrying.
+It is a well-meaning person, always glad to help friends.
+Defenses: NORMAL LR-SPELL WOOD
+Attacks: NORMAL WOOD
+
+great mottled feline is a level 13 Multipede.
+You feel that there is a hidden power ruling her actions.
+She has a good offensive, a very bad defensive and a poor parrying.
+She is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+forest giant is a level 20 Giant.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a bad defensive and a superb parrying.
+He is a balanced individual with little concern for good or evil.
+Defenses: NORMAL GIANT
+Attacks: GIANT
+A forest giant seems to be ruled by powers other than yours...
+
+Glorfindel is a level 30 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a superb defensive and a superb parrying.
+He must have been sent to Arda to free it from the sorrows that weigh upon it.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+Elladan is a level 26 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a very good defensive and a superb parrying.
+He must have been sent to Arda to free it from the sorrows that weigh upon it.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+Elrohir is a level 26 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a very good defensive and a superb parrying.
+He must have been sent to Arda to free it from the sorrows that weigh upon it.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+mountain troll is a level 20 Humanoid.
+You feel that there is a hidden power ruling its actions.
+It has a superb offensive, no defensive and a very good parrying.
+It is evil and could be a decent follower of Sauron.
+Defenses: NORMAL TROLL GIANT
+Attacks: NORMAL TROLL GIANT
+
+tawny-coated bear is a level 14 Multipede.
+You feel that there is a hidden power ruling her actions.
+She has a fair offensive, an awful defensive and a poor parrying.
+She is a balanced individual with little concern for good or evil.
+Defenses: NORMAL ANIMAL
+Attacks: NORMAL ANIMAL
+
+elven scout is a level 18 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a superb offensive, a bad defensive and a fair parrying.
+He is a firm believer in the values of Right and Wrong.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+sleuthing orc is a level 13 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has an average offensive, no defensive and a poor parrying.
+He is evil and could be a decent follower of Sauron.
+Defenses: NORMAL ORC
+Attacks: NORMAL ORC
+
+elven guard is a level 14 Humanoid. - Rivendell
+You feel that there is a hidden power ruling his actions.
+He has a good offensive, a bad defensive and an average parrying.
+He must have been sent to Arda to free it from the sorrows that weigh upon it.
+Defenses: NORMAL ELF
+Attacks: NORMAL ELF
+
+Bathmhûrz the Ancient is a level 17 Humanoid.
+You feel that there is a hidden power ruling her actions.
+She has a very good offensive, no defensive and a good parrying.
+She finds a form of beauty in others' pains.
+Defenses: NORMAL TROLL GIANT FUEL
+Attacks: NORMAL TROLL GIANT ANTI-TROLL
+
+orkish bodyguard is a level 18 Humanoid.
+You feel that there is a hidden power ruling his actions.
+He has a very good offensive, an awful defensive and a fair parrying.
+He is totally corrupted by the Evilness of Morgoth!
+Defenses: NORMAL ORC
+Attacks: NORMAL ORC

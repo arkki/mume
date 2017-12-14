@@ -84,7 +84,7 @@
 #sub {^a rusted iron key$} {%0 [0, orcs dungeon, Dunland, officer]}
 #sub {^a bright steel key$} {%0 [grille behind panels (wheels), commanding orc, wgate]}
 #sub {^a bent bone key$} {%0 [stonedoor, silver bracer, lurg leader d crack]}
-#sub {^a small brass key$} {%0 [0]}
+#sub {^a small brass key$} {%0 [brassdoor, ghosts, some e from thorns at ABR]}
 #sub {^a tiny silver key$} {%0 [0, 1 of 2 doors up from knight in rdell, Cirdan]}
 #sub {^a square stone key$} {%0 [force, Amon Othar, beast]}
 #sub {^a huge iron key$} {%0 [steeldoor/leaddoor, Shaghosh, Shaghosh]}
@@ -161,3 +161,8 @@
 #sub {^an intricate steel key$} {%0 [D, Umuk's chest (bda), orc behind greydoor]}
 #sub {^a large flint key$} {%0 [0]}
 #sub {^a very rusty key$} {%0 [gate, nobleman east of tharbad, nobleman]}
+
+#sub {^a crooked iron key$} {%0 [gate, Orc Mine Entrance, near goblin cave]}
+
+#sub {^a burnished iron key$} {%0 [chest, Illusionist, mid ABR]}
+#sub {^a small key of elven make$} {%0 [hillside, Elven hideout, e from Brolg]}

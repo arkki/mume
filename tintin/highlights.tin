@@ -85,3 +85,12 @@
 #highlight {; it glows red} {red}
 #highlight {; it glows blue} {blue}
 #highlight {[blue]} {blue}
+
+
+#highlight {^Your broadsword starts to glow very brightly!} {reverse bold blue}
+#highlight {^Your whole broadsword now glows with a pale blue light.} {reverse blue}
+#highlight {^The tip of your broadsword shows a faint bluish glow.} {reverse blue}
+#highlight {^Your broadsword glows less brightly.} {blue}
+#highlight {^The glow on your broadsword is now just a faint glimmer.} {blue}
+
+#highlight {^%*  slowly turns into stone.$} {red reverse b white}

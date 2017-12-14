@@ -67,6 +67,10 @@
 
 #alias {mix-heal} {empty bag;get sage all;get sage all;get foxtail all;get blackcurrant all;get athelas all;put sage bag;put sage bag;put foxtail bag;put blackcurrant bag;put athelas bag}
 
-#alias {mix-draught} {empty bag;get blood all;get tail all;get fur all;get tarragon all;put blood bag;put tail bag;put fur bag;put tarragon bag;mix bag}
+#alias {mix-draught} {empty bag;get blood all;get tail all;get bat-fur all;get tarragon all;put blood bag;put tail bag;put bat-fur bag;put tarragon bag;mix bag}
 
-#alias {mix-venom} {empty bag;get fluid-sack all;get fur all;get tail all;put fluid-sack bag;put fur bag;put tail bag;mix bag}
+#alias {mix-venom} {empty bag;get fluid-sack all;get bat-fur all;get tail all;put fluid-sack bag;put bat-fur bag;put tail bag;mix bag}
+
+#alias uloe {unlock exit %0;open exit %0}
+#alias cloe {close exit %0;lock exit %0}
+
