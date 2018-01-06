@@ -94,3 +94,8 @@
 #highlight {^The glow on your broadsword is now just a faint glimmer.} {blue}
 
 #highlight {^%*  slowly turns into stone.$} {red reverse b white}
+
+
+#NOP SUBS
+
+#sub {^Using your lockpicks, you try to %1 the lock...$} {Using your lockpicks, you try to >>> @upper{%1} <<< the lock...}

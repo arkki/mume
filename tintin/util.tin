@@ -1,0 +1,5 @@
+#function {upper} {
+    #format {upper_output} {%u} {%0};
+    #return $upper_output;
+}
+#alias {upper} {#echo {@upper{%0}}}

@@ -74,3 +74,6 @@
 #alias uloe {unlock exit %0;open exit %0}
 #alias cloe {close exit %0;lock exit %0}
 
+#alias crown {get crown all;remove helmet;wear crown;put helmet pack}
+#alias helm {get helmet all;remove crown;wear helmet;put crown pack}
+

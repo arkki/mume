@@ -48,6 +48,8 @@
 #read tintin/prompt.tin
 #read tintin/time.tin
 #read tintin/spell-timers.tin
+#read tintin/util.tin
+#read tintin/data-herbalkit.tin
 
 gg
 
