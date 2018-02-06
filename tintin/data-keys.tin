@@ -18,7 +18,7 @@
 #sub {^A small silver key is glittering in the dirt.$} {%0 [blackdoor, Sage's treasury, Sage]}
 #sub {^An engraved silver ring lies here.$} {%0 [crypt, near WC, WC]}
 #sub {^A stone key with square ends lies here.$} {%0 [force, Amon Othar, beast]}
-#sub {^A small brass key lies here.$} {%0 [0]}
+#sub {^A small brass key lies here.$} {%0 [brassdoor, ghosts, some e from thorns at ABR]}
 #sub {^An ancient silver key is lying here, giving off a faint glimmer.$} {%0 [d, book, OiE, Elrond/Sage]}
 #sub {^A large iron key is lying here on the ground.$} {%0 [steeldoor/leaddoor, Shaghosh, Shaghosh]}
 #sub {^A stone key, inlaid with wood, lies here.$} {%0 [chest, Eregion 2 statues, statue]}
@@ -26,6 +26,7 @@
 #sub {^A green key lies here, barely visible on the ground.$} {%0 [halldoor, Eregion, hunter]}
 #sub {^A very battered ironkey has been dropped here.$} {%0 [sconce, BW treasury, BW]}
 #sub {^A big, heavy stonekey has been left here.$} {%0 [stonedoor, BBT, BBT]}
+#sub {^A rusted key lies here.$} {%0 [door, A Fallen Cellar, near Warrens tower]}
 #sub {^A small stone key lies here.$} {%0 [stonelatch, Bulag's treasury, Bulag]}
 #sub {^A slightly bent iron key lies on the ground.$} {%0 [jade bracelet chest, boil infested troll]}
 #sub {^A heavy iron key with a large handle has been left here.$} {%0 [irondoor, Malardils castle, rogue/Malardil]}
@@ -78,91 +79,90 @@
 #sub {^A small key made of bronze lies here.$} {%0 [Marbledoor, outcast, nearby chest]}
 #sub {^A key made of iron lies on the ground.$} {%0 [vaultdoor, Icedoor, 1 of 2 statues]}
 #sub {^A small steel key lies here.$} {%0 [slab, Unqalome, fungus]}
-#sub {^a metal and stone key$} {%0 [cinderblock + tapestry, Eregion, grey spider]}
-#sub {^an engraved silver ring$} {%0 [crypt, near WC, WC]}
-#sub {^a wooden key$} {%0 [r, secret, treevillage, woman-archer]}
 #sub {^a rusted iron key$} {%0 [0, orcs dungeon, Dunland, officer]}
-#sub {^a bright steel key$} {%0 [grille behind panels (wheels), commanding orc, wgate]}
 #sub {^a bent bone key$} {%0 [stonedoor, silver bracer, lurg leader d crack]}
-#sub {^a small brass key$} {%0 [brassdoor, ghosts, some e from thorns at ABR]}
-#sub {^a tiny silver key$} {%0 [0, 1 of 2 doors up from knight in rdell, Cirdan]}
-#sub {^a square stone key$} {%0 [force, Amon Othar, beast]}
-#sub {^a huge iron key$} {%0 [steeldoor/leaddoor, Shaghosh, Shaghosh]}
 #sub {^a black bonekey$} {%0 [door, Nagrorh, Nagrorh]}
-#sub {^a City Key$} {%0 [r, Tharbad gates, guards]}
-#sub {^a small key carved from ebony$} {%0 [board + grating at Necro, Necro]}
-#sub {^an ebony key$} {%0 [1 of 2 doors up from knight in rdell, Elrond]}
 #sub {^a tinted brass key$} {%0 [door, gilded shield place, crow]}
-#sub {^a stonekey$} {%0 [pillars, mattock armoury, Mezagor]}
-#sub {^a large key$} {%0 [wall, Old Wight, brigand on OER e Bree]}
+#sub {^a crooked iron key$} {%0 [gate, Orc Mine Entrance, near goblin cave]}
+#sub {^an old iron key$} {%0 [rockdoor, GC, wraith]}
+#sub {^a twisted iron key$} {%0 [rd, irondoor, entrance to BW, spirit-soldier at GC]}
+#sub {^an old ornate key$} {%0 [sarcophagus, Dunland vellum, stone statue]}
+#sub {^a crude metal key$} {%0 [metaldoor, Filthy, large earth troll]}
+#sub {^a green iron key$} {%0 [prisondoor, NOC vellum place, olog-hai]}
+#sub {^an engraved stone key$} {%0 [irondoor, Overseer, Overseer?]}
+#sub {^a copper key$} {%0 [grate, pipeweed smugglers, experienced smuggler]}
+#sub {^a large flint key$} {%0 [0]}
+#sub {^a key$} {%0 [secret, smugglers south Bree, Chief]}
+#sub {^a small key of elven make$} {%0 [hillside, Elven hideout, e from Brolg]}
+#sub {^a skull key$} {%0 [burialtrap, near Hillmen, hillmen chief]}
+#sub {^a small key carved from ebony$} {%0 [board + grating at Necro, Necro]}
+#sub {^a slightly bent iron key$} {%0 [jade bracelet chest, boil infested troll]}
 #sub {^a brass key$} {%0 [metaldoor, bandit leader, bandit leader]}
 #sub {^an old key$} {%0 [chest, lord's treasury, Wight-lord]}
-#sub {^a skull key$} {%0 [burialtrap, near Hillmen, hillmen chief]}
-#sub {^a black stone key$} {%0 [panels at great wheels, commanding orc, wgate]}
-#sub {^a simple metal key$} {%0 [cover, BM mines, spiders]}
-#sub {^a jade-encrusted key$} {%0 [d, archeddoor under hatch, Lorien, in the quest medallion]}
-#sub {^a great bone key$} {%0 [trapdoor, Balrog rings key, whirlpool]}
-#sub {^a green iron key$} {%0 [prisondoor, NOC vellum place, olog-hai]}
 #sub {^a blood-stained key$} {%0 [rack, OOC, orc torturer]}
-#sub {^a mithril key$} {%0 [mithrildoor, Balrog rings key, Muranog's cabinet]}
 #sub {^a black key$} {%0 [portcullis, LB fort, guards]}
-#sub {^a tiny bronze key$} {%0 [Marbledoor, outcast, nearby chest]}
-#sub {^a black and silver key$} {%0 [slab, Old Wight, wight-warrior]}
-#sub {^an old bronze key$} {%0 [Wolfgate, NOC, chieftain]}
-#sub {^a shining key$} {%0 [archeddoors, Muranog's treasury, Muranog]}
 #sub {^an ancient dwarven key$} {%0 [d, flagstone, circlet chest, packrat]}
 #sub {^a big metal key$} {%0 [0, oakendoor, Rohir tower, guards]}
-#sub {^an ancient key$} {%0 [stoneslab, lww smugglers, chief of smugglers]}
+#sub {^a small silver key$} {%0 [AM quest item + AM chest, Malardil; blackdoor, Sage's treasury, Sage; AM quest item + AM chest, Malardil; blackdoor, Sage's treasury, Sage?]}
+#sub {^a Fornost city key$} {%0 [r, Fornost gates, guards]}
+#sub {^a rusted key$} {%0 [Cryptdoor, Old Wight, Old Wight]}
+#sub {^a small twisted root$} {%0 [wall, Ferny, Ferny]}
+#sub {^a blue steel-key$} {%0 [minedoor, Dunland mines, liche]}
+#sub {^a mithril key$} {%0 [mithrildoor, Balrog rings key, Muranog's cabinet]}
+#sub {^a silvery key$} {%0 [door, GC room, GC]}
+#sub {^a slimy iron key$} {%0 [vaultdoor, Icedoor, 1 of 2 statues]}
+#sub {^a heavy iron key$} {%0 [door, Drain Pipe, great orc]}
+#sub {^a chained silver key$} {%0 [joist, AM treasury, AM]}
+#sub {^a simple metal key$} {%0 [cover, BM mines, spiders]}
+#sub {^a very rusty key$} {%0 [gate, nobleman east of tharbad, nobleman]}
+#sub {^a metal and stone key$} {%0 [cinderblock + tapestry, Eregion, grey spider]}
+#sub {^a bright steel key$} {%0 [grille behind panels (wheels), commanding orc, wgate]}
+#sub {^a small brass key$} {%0 [brassdoor, ghosts, some e from thorns at ABR]}
+#sub {^a wooden key$} {%0 [r, secret, treevillage, woman-archer]}
+#sub {^an ebony key$} {%0 [1 of 2 doors up from knight in rdell, Elrond]}
+#sub {^a large key$} {%0 [wall, Old Wight, brigand on OER e Bree]}
+#sub {^a jade-encrusted key$} {%0 [d, archeddoor under hatch, Lorien, in the quest medallion]}
+#sub {^a tiny bronze key$} {%0 [Marbledoor, outcast, nearby chest]}
+#sub {^an engraved silver ring$} {%0 [crypt, near WC, WC]}
 #sub {^a pry-bar$} {%0 [tombstone, Amon Othar, crazed dwarf]}
-#sub {^an old iron key$} {%0 [rockdoor, GC, wraith]}
+#sub {^a polished copper key$} {%0 [door + irondoor, DT, guards]}
 #sub {^a tarnished metal key$} {%0 [doors in VT, guards]}
 #sub {^a tiny stonekey$} {%0 [stonedoor+prisondoor, Barbaras castle, prisonguard]}
-#sub {^a small silver key$} {%0 [AM quest item + AM chest, Malardil; blackdoor, Sage's treasury, Sage; AM quest item + AM chest, Malardil; blackdoor, Sage's treasury, Sage?]}
-#sub {^a slimy metal key$} {%0 [3 irondoors in Shaghosh area, lurg leader at Shaghosh]}
+#sub {^a small steel key$} {%0 [slab, Unqalome, fungus]}
 #sub {^a castle key$} {%0 [irondoor, Malardils castle, rogue/Malardil]}
 #sub {^a metal key$} {%0 [Oakendoor, Necro, Gahruuk/Necro; door, Tharbad chief, Chief's 1.bodyguard; Oakendoor, Necro / door, Tharbad chief, Gahruuk/Necro]}
 #sub {^a black metal key$} {%0 [towerdoor, ABR tower, guards]}
-#sub {^a Fornost city key$} {%0 [r, Fornost gates, guards]}
+#sub {^a square stone key$} {%0 [force, Amon Othar, beast]}
 #sub {^a small iron key$} {%0 [carpet/slab, to mda chest, Overseer; chest, Illusionist + x-door, trolls, wraith; carpet/slab, to mda chest at Overseer / cheest, Illusionist + x-door, trolls, Overseer]}
-#sub {^a twisted iron key$} {%0 [rd, irondoor, entrance to BW, spirit-soldier at GC]}
-#sub {^a polished copper key$} {%0 [door + irondoor, DT, guards]}
 #sub {^a dirty stone key$} {%0 [floor/ceiling, 2h-axe Eregion, chest, some s/e/d]}
-#sub {^an old ornate key$} {%0 [sarcophagus, Dunland vellum, stone statue]}
-#sub {^a crude metal key$} {%0 [metaldoor, Filthy, large earth troll]}
-#sub {^a rusted key$} {%0 [Cryptdoor, Old Wight, Old Wight]}
-#sub {^a small twisted root$} {%0 [wall, Ferny, Ferny]}
-#sub {^a dirty key$} {%0 [trapdoor, bandit leader, thug at bandit leader]}
-#sub {^a rigid metal key$} {%0 [trapdoor, GH Old Ruins, bandit, Strange Shady]}
-#sub {^an icy key$} {%0 [D, all doors, Balrog treasury, Balrog]}
-#sub {^a blue steel-key$} {%0 [minedoor, Dunland mines, liche]}
-#sub {^a green key$} {%0 [halldoor, Eregion, hunter]}
-#sub {^a big stonekey$} {%0 [stonedoor, BBT, BBT]}
-#sub {^a shop key$} {%0 [Tharbad shop key, shopkeeper]}
-#sub {^a slimy iron key$} {%0 [vaultdoor, Icedoor, 1 of 2 statues]}
-#sub {^a fragile stone key$} {%0 [stonedoor, Unqalome, random mob in zone]}
+#sub {^a small rusted iron key$} {%0 [door, A Fallen Cellar, near Warrens tower]}
 #sub {^a glass key$} {%0 [flagstone, DK, DK]}
-#sub {^an engraved stone key$} {%0 [irondoor, Overseer, Overseer?]}
-#sub {^a Jail key$} {%0 [r, jaildoor, Bree, guard]}
-#sub {^a copper key$} {%0 [grate, pipeweed smugglers, experienced smuggler]}
-#sub {^a jewel-encrusted key$} {%0 [jewelleddoor, Balrog rings key, Bulag's treasury]}
+#sub {^a rigid metal key$} {%0 [trapdoor, GH Old Ruins, bandit, Strange Shady]}
+#sub {^a small stone key$} {%0 [stonelatch, Bulag's treasury, Bulag]}
+#sub {^a big stonekey$} {%0 [stonedoor, BBT, BBT]}
 #sub {^a granite key inlaid with wood$} {%0 [chest, Eregion 2 statues, statue]}
-#sub {^a bloody key$} {%0 [door/gorydoor, Mezagor, Mezagor]}
+#sub {^a Jail key$} {%0 [r, jaildoor, Bree, guard]}
+#sub {^a fragile stone key$} {%0 [stonedoor, Unqalome, random mob in zone]}
+#sub {^a jewel-encrusted key$} {%0 [jewelleddoor, Balrog rings key, Bulag's treasury]}
 #sub {^an ancient silver key$} {%0 [d, book, OiE, Elrond/Sage]}
 #sub {^a heavy steel key$} {%0 [stonedoor/rockface, OOC, Gumak]}
-#sub {^a small stone key$} {%0 [stonelatch, Bulag's treasury, Bulag]}
-#sub {^a heavy iron key$} {%0 [door, Drain Pipe, great orc]}
-#sub {^a chained silver key$} {%0 [joist, AM treasury, AM]}
-#sub {^a decayed ironkey$} {%0 [sconce, BW treasury, BW]}
-#sub {^a small steel key$} {%0 [slab, Unqalome, fungus]}
 #sub {^a small copper key$} {%0 [granite, Unqalome, pile of rocks]}
-#sub {^a silvery key$} {%0 [door, GC room, GC]}
-#sub {^a slightly bent iron key$} {%0 [jade bracelet chest, boil infested troll]}
-#sub {^a key$} {%0 [secret, smugglers south Bree, Chief]}
-#sub {^an intricate steel key$} {%0 [D, Umuk's chest (bda), orc behind greydoor]}
-#sub {^a large flint key$} {%0 [0]}
-#sub {^a very rusty key$} {%0 [gate, nobleman east of tharbad, nobleman]}
-
-#sub {^a crooked iron key$} {%0 [gate, Orc Mine Entrance, near goblin cave]}
-
+#sub {^a tiny silver key$} {%0 [0, 1 of 2 doors up from knight in rdell, Cirdan]}
+#sub {^a huge iron key$} {%0 [steeldoor/leaddoor, Shaghosh, Shaghosh]}
+#sub {^a City Key$} {%0 [r, Tharbad gates, guards]}
+#sub {^a stonekey$} {%0 [pillars, mattock armoury, Mezagor]}
+#sub {^a black stone key$} {%0 [panels at great wheels, commanding orc, wgate]}
+#sub {^a black and silver key$} {%0 [slab, Old Wight, wight-warrior]}
+#sub {^an old bronze key$} {%0 [Wolfgate, NOC, chieftain]}
+#sub {^a shining key$} {%0 [archeddoors, Muranog's treasury, Muranog]}
+#sub {^an ancient key$} {%0 [stoneslab, lww smugglers, chief of smugglers]}
+#sub {^a dirty key$} {%0 [trapdoor, bandit leader, thug at bandit leader]}
+#sub {^an icy key$} {%0 [D, all doors, Balrog treasury, Balrog]}
+#sub {^a great bone key$} {%0 [trapdoor, Balrog rings key, whirlpool]}
+#sub {^a green key$} {%0 [halldoor, Eregion, hunter]}
+#sub {^a shop key$} {%0 [Tharbad shop key, shopkeeper]}
+#sub {^a slimy metal key$} {%0 [3 irondoors in Shaghosh area, lurg leader at Shaghosh]}
+#sub {^a bloody key$} {%0 [door/gorydoor, Mezagor, Mezagor]}
+#sub {^a decayed ironkey$} {%0 [sconce, BW treasury, BW]}
 #sub {^a burnished iron key$} {%0 [chest, Illusionist, mid ABR]}
-#sub {^a small key of elven make$} {%0 [hillside, Elven hideout, e from Brolg]}
+#sub {^an intricate steel key$} {%0 [D, Umuk's chest (bda), orc behind greydoor]}

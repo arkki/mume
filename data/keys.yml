@@ -410,9 +410,9 @@
   roomdesc: A metal key covered with some green slime.
 -
   invdesc: a small brass key
-  exit:
+  exit: brassdoor
+  location: ghosts, some e from thorns at ABR
   roomdesc: A small brass key lies here.
-  flags: 0
 -
   invdesc: a small copper key
   exit: granite
@@ -551,9 +551,26 @@
   exit: AM quest item + AM chest
   loads: Malardil
   flags: !
-- 
+-
   invdesc: a small silver key
   exit: blackdoor
   location: Sage's treasury
   loads: Sage?
   flags: !
+-
+  invdesc: a small rusted iron key
+  exit: door
+  location: A Fallen Cellar, near Warrens tower
+  roomdesc: A rusted key lies here.
+-
+  invdesc: a crooked iron key
+  exit: gate
+  location: Orc Mine Entrance, near goblin cave
+-
+  invdesc: a burnished iron key
+  exit: chest
+  location: Illusionist, mid ABR
+-
+  invdesc: a small key of elven make
+  exit: hillside
+  location: Elven hideout, e from Brolg
