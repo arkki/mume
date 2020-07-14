@@ -90,9 +90,9 @@ Mage Spells		Rdell	Hlond	Flond	MinBreth Tbad	Ingrv	Lorien
 Cleric Spells		Rdell	Hlond	Flond	Druid 	MinBrethTbad	Lorien
 1:Detect Evil 		8	5	8	- 	8	-	8
 1:Cure Light 		12	5	3	6 	3	-	12
-2:Create Water 		-	2	-	12 	-	-	5
+2:Create Water 		2	2	-	12 	-	-	5
 2:Detect Poison 	6	3	3	8 	3	-	8
-3:Create Food 		-	2	-	12 	-	-	3
+3:Create Food 		2	2	-	12 	-	-	3
 3:Smother 		-	-	-	9 	3	6	-
 4:Cure Blindness 	12	2	3	- 	1	2	12
 4:Protection from Evil	3	-	12	- 	2	-	12
