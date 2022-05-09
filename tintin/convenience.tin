@@ -7,8 +7,8 @@
 
 #action {^You go to sleep.$} {hp}
 #action {^You lie down on the bed and go to sleep.$} {hp}
-#action {^You wake, and sit up.$} {unhp; stand}
-#action {^You wake, and sit up on the bed.$} {unhp; stand}
+#action {^You wake, and sit up.$} {unhp}
+#action {^You wake, and sit up on the bed.$} {unhp}
 
 #alias rep {info REPORT: HP: %z/%Z, Mana: %e/%E, Moves: %j/%J}
 #action {^REPORT: %+$} {#line gag;emote reports '%1'}

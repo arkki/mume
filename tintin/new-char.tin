@@ -1,4 +1,4 @@
-alias exp info Exp: %X [%T] (total: %x [%t])
+alias exp info ,Exp: %X [%T] (total: %x [%t])
 alias pk trophy
 alias ta label & k
 alias k kill & k

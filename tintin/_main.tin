@@ -41,6 +41,7 @@
 #read tintin/data-lockpicks.tin
 #read tintin/data-herbs.tin
 #read tintin/data-mobs.tin
+#read tintin/data-scrolls.tin
 #read tintin/convenience.tin
 #read tintin/aliases.tin
 #read tintin/highlights.tin

@@ -1,20 +1,13 @@
-#alias boots {remove boots;get boots pack;wear boots;put boots pack}
-#alias shoes {remove boots;get snowshoes pack;wear snowshoes;put boots pack}
-#alias gloves {remove gloves;get gloves pack;wear gloves;put gloves pack}
-
-#alias fur {remove cloak;get fur pack;wear fur;put cloak pack}
-#alias cloak {remove cloak;remove fur;get cloak pack;wear cloak;put cloak pack;put fur pack}
-
 #alias {oxc} {open chest;examine chest}
 
-#alias hp {#tick hp {info HP: %z/%Z, Mana: %e/%E, Moves: %j/%J} 10}
-#alias unhp {#untick hp}
+#alias {hp} {#tick hp {info HP: %z/%Z, Mana: %e/%E, Moves: %j/%J} 10}
+#alias {unhp} {#untick hp}
 
-#alias gg {#gag {^$}}
-#alias ugg {#ungag {^$}}
+#alias {gg} {#gag {^$}}
+#alias {ugg} {#ungag {^$}}
 
-#alias idle {#ticker idle {prac} 60}
-#alias unidle {#unticker idle}
+#alias {idle} {#ticker idle {prac} 60}
+#alias {unidle} {#unticker idle}
 
 #alias {c} {
 	_close
@@ -51,19 +44,25 @@
 	quaff zaugurz-draught
 }
 
-#alias qsc {
+#alias {qsc} {
     get scorched all;
     quaff scorched
+}
+
+#alias {qm} {
+    get miruvor all;
+    quaff miruvor
 }    
 
-#alias {purp} {get purple all;recite purple}
+#alias {purple} {get purplescroll all;recite purplescroll}
+#alias {blue} {get bluescroll all;recite bluescroll}
+#alias {black} {get blackscroll all;recite blackscroll}
+#alias {azure} {get azurescroll all;recite azurescroll}
+#alias {fragile} {get fragilescroll all;recite fragilescroll}
 
-#alias {azure} {get azure all;recite azure}
+#alias {ur} {get rock all;use rock}
 
-#alias {fragile} {get fragile all;recite fragile}
-
-#alias ur {get rock all;use rock}
-
+#alias {mix-antidote} {empty bag;get blackberries all;get blackberries all;get figwort all;get athelas all;put blackberries bag;put blackberries bag;put figwort bag;put athelas bag;mix bag}
 
 #alias {mix-heal} {empty bag;get sage all;get sage all;get foxtail all;get blackcurrant all;get athelas all;put sage bag;put sage bag;put foxtail bag;put blackcurrant bag;put athelas bag}
 
@@ -71,9 +70,32 @@
 
 #alias {mix-venom} {empty bag;get fluid-sack all;get bat-fur all;get tail all;put fluid-sack bag;put bat-fur bag;put tail bag;mix bag}
 
-#alias uloe {unlock exit %0;open exit %0}
-#alias cloe {close exit %0;lock exit %0}
+#alias {cont %1} {#var container %1;#echo {Container set to $container}}
 
-#alias crown {get crown all;remove helmet;wear crown;put helmet pack}
-#alias helm {get helmet all;remove crown;wear helmet;put crown pack}
+#alias {ce %1 %2} {
+	get %2 $container;remove %1;put %1 $container;wear %2
+} {1}
 
+#alias {ce} {
+	get %1 $container;remove %1;put %1 $container;wear %1
+} {5}
+
+#alias {clo} {_close %1;_lock %1}
+#alias {ulo} {_unlock %1;_open %1}
+
+#alias {uloe} {unlock exit %0;open exit %0}
+#alias {cloe} {close exit %0;lock exit %0}
+
+#alias 0 {k;oa}
+#alias ka {k;oa}
+
+#alias {a1} {alias 1}
+#alias {a2} {alias 2}
+#alias {a3} {alias 3}
+#alias {a4} {alias 4}
+#alias {a5} {alias 5}
+#alias {a6} {alias 6}
+#alias {a7} {alias 7}
+#alias {a8} {alias 8}
+#alias {a9} {alias 9}
+#nop #alias {a0} {alias 0}

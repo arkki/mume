@@ -1,6 +1,6 @@
-#action {^The current time is %1:%2 %3.$} {setmumetime %1 %2 %3}
+#nop #action {^The current time is %1:%2 %3.$} {setmumetime %1 %2 %3}
 
-#action {^A huge clock is standing here.$} {look clock}
+#nop #action {^A huge clock is standing here.$} {look clock}
 
 
 #variable {hour} {1}

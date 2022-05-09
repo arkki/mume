@@ -1,7 +1,5 @@
-login
-log
-logs/*.log
+_temp/
+map/
+logs/
 chars/
-*~
-mmapper
-tt++
+statgen-new/

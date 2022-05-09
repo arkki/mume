@@ -127,7 +127,7 @@
 #sub {^a pry-bar$} {%0 [tombstone, Amon Othar, crazed dwarf]}
 #sub {^a polished copper key$} {%0 [door + irondoor, DT, guards]}
 #sub {^a tarnished metal key$} {%0 [doors in VT, guards]}
-#sub {^a tiny stonekey$} {%0 [stonedoor+prisondoor, Barbaras castle, prisonguard]}
+#sub {^a tiny stone key$} {%0 [stonedoor+prisondoor, Barbaras castle, prisonguard]}
 #sub {^a small steel key$} {%0 [slab, Unqalome, fungus]}
 #sub {^a castle key$} {%0 [irondoor, Malardils castle, rogue/Malardil]}
 #sub {^a metal key$} {%0 [Oakendoor, Necro, Gahruuk/Necro; door, Tharbad chief, Chief's 1.bodyguard; Oakendoor, Necro / door, Tharbad chief, Gahruuk/Necro]}

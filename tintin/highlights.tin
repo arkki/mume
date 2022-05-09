@@ -9,6 +9,8 @@
 #highlight {corpse} {bold red}
 #highlight {red aura} {bold red}
 
+#highlight {^You failed to control %*.$} {red reverse b white}
+
 
 #highlight {R.I.P.} {bold yellow}
 #nop highlight {^%* has arrived from %*.$} {bold yellow}
@@ -62,7 +64,9 @@
 #highlight {^A cowled sorcerer, in dark robes, gestures when he sees you.$} {light blue}
 #highlight {^A glint of metal in the mud catches your eye.$} {light blue}
 
+#NOP WARNINGS
 
+#highlight {^A grinding noise is heard from the ceiling.$} {red reverse b white}
 #highlight {^A dot in the sky approaches quickly and seems to be some sort of very large bird!$} {red reverse b white}
 #highlight {^A loud, aggressive shriek echoes through the skies!$} {red reverse b white}
 #highlight {^The bird turns out to be a black, leathery beast that flies in a circle high above!$} {red reverse b white}
@@ -94,7 +98,6 @@
 #highlight {^The glow on your broadsword is now just a faint glimmer.} {blue}
 
 #highlight {^%*  slowly turns into stone.$} {red reverse b white}
-
 
 #NOP SUBS
 
