@@ -285,8 +285,8 @@ Cleric Spells		Sage	Evil P.	Brolg
 12:Remove Curse		-	7	-
 13:Energy Drain		-	26	-
 13:Darkness		8	-	11
-15:Fear	-		18	26
-15:Harm	-		22	-
+15:Fear			-	18	26
+15:Harm			-	22	-
 16:Black Breath		-	25	35
 17:Break Door		14	-	-
 17:Hold			-	35	-
